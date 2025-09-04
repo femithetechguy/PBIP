@@ -1,0 +1,35 @@
+# Power BI project ignores
+# PBIX files (binary, not source-controlled)
+*.pbix
+# Note: .pbip files should be version controlled as they define the project structure
+
+# Power BI backup and temp files
+PBIX_BACKUP/
+*.tmp
+*.bak
+
+# Power BI cache and local settings
+**/.pbi/cache.abf
+**/.pbi/localSettings.json
+
+# Static resources and custom visuals (if not source-controlled)
+*/StaticResources/
+*/CustomVisuals/
+
+# System files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Node modules (if any JS/TS custom visuals)
+node_modules/
+
+# VS Code settings
+.vscode/
+
+# Python virtual environments (if used)
+venv/
+.env/
+
+# Log files
+*.log
