@@ -1,0 +1,198 @@
+table DimDate
+	lineageTag: 9d90d9f1-2b4b-46d7-a721-84c1eb5fe4ca
+
+	measure 'Disbursement last 6 Months'
+		formatString: 0
+		lineageTag: 41e308c5-55b4-4c27-a0b0-bb5a9315f092
+
+	measure Target = 0.12
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 46deb9fd-9847-4d95-801a-79dcadfbdf52
+
+	column FullDateAlternateKey
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 6d50c897-57e0-45d2-9b1a-e0c8a217e6b0
+		summarizeBy: none
+		sourceColumn: FullDateAlternateKey
+
+		variation Variation
+			isDefault
+			relationship: 49d6d520-f632-472e-8688-b062dd41715b
+			defaultHierarchy: LocalDateTable_64ed4c30-4f19-4765-ad75-7eec422467e7.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Year
+		dataType: int64
+		lineageTag: b689c36e-50e7-4def-9d21-0e6e1b914f9a
+		summarizeBy: none
+		sourceColumn: Year
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Month
+		dataType: double
+		lineageTag: 2bcd8fd9-a220-4bfe-8f6d-8ed140b65224
+		summarizeBy: sum
+		sourceColumn: Month
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Month Name'
+		dataType: string
+		lineageTag: 0a0ad54f-f8f6-40b9-aead-6a7fe5d9549d
+		summarizeBy: none
+		sourceColumn: Month Name
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column Quarter
+		dataType: double
+		lineageTag: ef5960a2-45a2-4cd6-ade8-488974bb6f6e
+		summarizeBy: sum
+		sourceColumn: Quarter
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Week of Year'
+		dataType: double
+		lineageTag: 41bbc742-c80e-4332-b6b6-1b02b32e027b
+		summarizeBy: sum
+		sourceColumn: Week of Year
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Week of Month'
+		dataType: double
+		lineageTag: 47517d74-ae68-4169-8db3-fafba9493e90
+		summarizeBy: sum
+		sourceColumn: Week of Month
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Day
+		dataType: double
+		lineageTag: b6c2dbab-e2af-40ef-8f16-a4052b2311aa
+		summarizeBy: sum
+		sourceColumn: Day
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Day of Week'
+		dataType: double
+		lineageTag: b6ae21ba-0f39-4930-9340-9799db428631
+		summarizeBy: sum
+		sourceColumn: Day of Week
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Day of Year'
+		dataType: double
+		lineageTag: 9b82eb9d-3775-472d-81b2-2d78cee19218
+		summarizeBy: sum
+		sourceColumn: Day of Year
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Day Name'
+		dataType: string
+		lineageTag: de5580c8-59c7-430c-98da-246ede298ddc
+		summarizeBy: none
+		sourceColumn: Day Name
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column DateKey
+		dataType: int64
+		formatString: 0
+		lineageTag: e63b447b-60cf-4b55-8ae2-32063f026b4c
+		summarizeBy: none
+		sourceColumn: DateKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsLast6month
+		dataType: string
+		lineageTag: c4767c85-04c3-4d56-8dc1-b591f23d05cf
+		summarizeBy: none
+		sourceColumn: IsLast6month
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	partition DimDate-35345de7-f848-4a60-89cd-1260d2982f7d = m
+		mode: import
+		source =
+				let
+				    StartDate = #date(2014,1,1),
+				    EndDate = #date(2020,02,29),
+				    NumberOfDays = Duration.Days( EndDate - StartDate ),
+				    Dates = List.Dates(StartDate, NumberOfDays+1, #duration(1,0,0,0)),
+				    #"Converted to Table" = Table.FromList(Dates, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+				    #"Renamed Columns" = Table.RenameColumns(#"Converted to Table",{{"Column1", "FullDateAlternateKey"}}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns",{{"FullDateAlternateKey", type date}}),
+				    #"Inserted Year" = Table.AddColumn(#"Changed Type", "Year", each Date.Year([FullDateAlternateKey]), type number),
+				    #"Inserted Month" = Table.AddColumn(#"Inserted Year", "Month", each Date.Month([FullDateAlternateKey]), type number),
+				    #"Inserted Month Name" = Table.AddColumn(#"Inserted Month", "Month Name", each Date.MonthName([FullDateAlternateKey]), type text),
+				    #"Inserted Quarter" = Table.AddColumn(#"Inserted Month Name", "Quarter", each Date.QuarterOfYear([FullDateAlternateKey]), type number),
+				    #"Inserted Week of Year" = Table.AddColumn(#"Inserted Quarter", "Week of Year", each Date.WeekOfYear([FullDateAlternateKey]), type number),
+				    #"Inserted Week of Month" = Table.AddColumn(#"Inserted Week of Year", "Week of Month", each Date.WeekOfMonth([FullDateAlternateKey]), type number),
+				    #"Inserted Day" = Table.AddColumn(#"Inserted Week of Month", "Day", each Date.Day([FullDateAlternateKey]), type number),
+				    #"Inserted Day of Week" = Table.AddColumn(#"Inserted Day", "Day of Week", each Date.DayOfWeek([FullDateAlternateKey]), type number),
+				    #"Inserted Day of Year" = Table.AddColumn(#"Inserted Day of Week", "Day of Year", each Date.DayOfYear([FullDateAlternateKey]), type number),
+				    #"Inserted Day Name" = Table.AddColumn(#"Inserted Day of Year", "Day Name", each Date.DayOfWeekName([FullDateAlternateKey]), type text),
+				    #"Duplicated Column" = Table.DuplicateColumn(#"Inserted Day Name", "FullDateAlternateKey", "FullDateAlternateKey - Copy"),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Duplicated Column",{{"FullDateAlternateKey - Copy", type text}}),
+				    #"Split Column by Delimiter" = Table.SplitColumn(#"Changed Type1", "FullDateAlternateKey - Copy", Splitter.SplitTextByDelimiter("-", QuoteStyle.Csv), {"FullDateAlternateKey - Copy.1", "FullDateAlternateKey - Copy.2", "FullDateAlternateKey - Copy.3"}),
+				    #"Merged Columns" = Table.CombineColumns(#"Split Column by Delimiter",{"FullDateAlternateKey - Copy.3", "FullDateAlternateKey - Copy.2", "FullDateAlternateKey - Copy.1"},Combiner.CombineTextByDelimiter("", QuoteStyle.None),"Merged"),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Merged Columns",{{"Merged", "DateKey"}}),
+				    #"Changed Type2" = Table.TransformColumnTypes(#"Renamed Columns1",{{"DateKey", Int64.Type}}),
+				    #"Reordered Columns" = Table.ReorderColumns(#"Changed Type2",{"DateKey", "FullDateAlternateKey", "Year", "Month", "Month Name", "Quarter", "Week of Year", "Week of Month", "Day", "Day of Week", "Day of Year", "Day Name"}),
+				    #"Duplicated Column1" = Table.DuplicateColumn(#"Reordered Columns", "FullDateAlternateKey", "FullDateAlternateKey - Copy"),
+				    #"Removed Columns" = Table.RemoveColumns(#"Duplicated Column1",{"FullDateAlternateKey - Copy"}),
+				    #"Added Custom" = Table.AddColumn(#"Removed Columns", "Custom", each Date.AddDays([FullDateAlternateKey],-180)),
+				    #"Added Custom1" = Table.AddColumn(#"Added Custom", "Entity", each "ABX"),
+				    #"Changed Type3" = Table.TransformColumnTypes(#"Added Custom1",{{"Entity", type text}}),
+				    #"Reordered Columns1" = Table.ReorderColumns(#"Changed Type3",{"DateKey", "FullDateAlternateKey", "Year", "Month", "Month Name", "Quarter", "Week of Year", "Week of Month", "Day", "Day of Week", "Day of Year", "Day Name", "Entity", "Custom"}),
+				    #"Merged Queries" = Table.NestedJoin(#"Reordered Columns1", {"Entity"}, MaxDisbursement, {"entity_code"}, "MaxDisbursement", JoinKind.LeftOuter),
+				    #"Expanded MaxDisbursement" = Table.ExpandTableColumn(#"Merged Queries", "MaxDisbursement", {"Merged"}, {"Merged"}),
+				    #"Renamed Columns2" = Table.RenameColumns(#"Expanded MaxDisbursement",{{"Merged", "MaxDt"}}),
+				    #"Changed Type4" = Table.TransformColumnTypes(#"Renamed Columns2",{{"Custom", type date}}),
+				    #"Added Custom2" = Table.AddColumn(#"Changed Type4", "Custom.1", each Date.AddDays([MaxDt],-180)),
+				    #"Renamed Columns3" = Table.RenameColumns(#"Added Custom2",{{"Custom.1", "Last6month"}}),
+				    #"Added Custom3" = Table.AddColumn(#"Renamed Columns3", "Custom.1", each [FullDateAlternateKey] >= [Last6month]),
+				    #"Renamed Columns4" = Table.RenameColumns(#"Added Custom3",{{"Custom.1", "IsLast6month"}}),
+				    #"Removed Columns1" = Table.RemoveColumns(#"Renamed Columns4",{"Entity", "Custom", "MaxDt", "Last6month"})
+				in
+				    #"Removed Columns1"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

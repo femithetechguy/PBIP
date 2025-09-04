@@ -1,0 +1,88 @@
+table Vacancy
+	lineageTag: 38e3a32a-fd46-4478-b1e4-5c2c6a1a8fd5
+
+	column VACANCY_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: 2fc444ec-5cb1-4115-bd46-ab542eac6103
+		summarizeBy: none
+		sourceColumn: VACANCY_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Vacancy_Name
+		dataType: string
+		lineageTag: 957656c0-e625-43d6-82c1-f9ce971d01e6
+		summarizeBy: none
+		sourceColumn: Vacancy_Name
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column VACANCY_START_DATE
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 1105af73-1b17-47ce-8f23-c923f0b30158
+		summarizeBy: none
+		sourceColumn: VACANCY_START_DATE
+
+		variation Variation
+			isDefault
+			relationship: 5a453cde-3f76-4974-8cd1-30b02a867d82
+			defaultHierarchy: LocalDateTable_240c6666-2f67-4300-8f32-a64dd5e57e79.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column VACANCY_END_DATE
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: b6d514b3-f80e-4cd4-9ae7-8fd580aca623
+		summarizeBy: none
+		sourceColumn: VACANCY_END_DATE
+
+		variation Variation
+			isDefault
+			relationship: 0a209fa6-44ff-4b4c-8f02-291db42ba473
+			defaultHierarchy: LocalDateTable_d90abc3f-d1a9-4db2-bc08-d5070b9f4c9e.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column LASTDATEFORAPPLICATION
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 511df873-ca1f-491d-a4c5-da8855957954
+		summarizeBy: none
+		sourceColumn: LASTDATEFORAPPLICATION
+
+		variation Variation
+			isDefault
+			relationship: f6e97909-163e-4d94-bd84-fa0ebe66632a
+			defaultHierarchy: LocalDateTable_9aad8d27-e1cb-46bc-a171-fadf26e0d95a.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition Vacancy-178e0483-9613-4e39-8e30-a520028f02d0 = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("D:\AnalyticsWithNaga\Source\Projects\V6 Application Tracking.xlsx"), null, true),
+				    #"Final Dataset_Sheet" = Source{[Item="Final Dataset",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(#"Final Dataset_Sheet", [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Application ID", Int64.Type}, {"Qualification", type text}, {"CandidateID", Int64.Type}, {"Name", type any}, {"Gender", type text}, {"CreatedDate", type date}, {"Application Status", type text}, {"VACANCY_ID", Int64.Type}, {"Vacancy_Name", type text}, {"VACANCY_START_DATE", type date}, {"VACANCY_END_DATE", type date}, {"LASTDATEFORAPPLICATION", type date}, {"RejectedReason", type any}}),
+				    #"Removed Other Columns" = Table.SelectColumns(#"Changed Type",{"VACANCY_ID", "Vacancy_Name", "VACANCY_START_DATE", "VACANCY_END_DATE", "LASTDATEFORAPPLICATION"}),
+				    #"Removed Duplicates" = Table.Distinct(#"Removed Other Columns"),
+				    #"Sorted Rows" = Table.Sort(#"Removed Duplicates",{{"VACANCY_ID", Order.Ascending}})
+				in
+				    #"Sorted Rows"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

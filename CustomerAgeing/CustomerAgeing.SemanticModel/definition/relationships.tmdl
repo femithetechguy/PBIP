@@ -1,0 +1,26 @@
+relationship 675bdb96-c22e-4fc9-9c28-8e6cc87c0cec
+	fromColumn: SalesFact.Area
+	toColumn: Geography.Area
+
+relationship e70b94f2-7217-4adf-a156-d094cc40204a
+	fromColumn: SalesFact.Customer
+	toColumn: Customer.'Customer name'
+
+relationship 8f7234df-5d01-4975-b098-6c1bd3112899
+	fromColumn: SalesFact.Equipment
+	toColumn: Equipment.'Equipment Name'
+
+relationship f5a1ec0f-2066-4504-92d7-5c7f5cb129e6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: DimDate.Date
+	toColumn: LocalDateTable_d298c8ad-0864-472a-9d16-9927ac9f87a2.Date
+
+relationship 8a5c4584-1db7-4386-9a5e-fb84d9295ba8
+	fromColumn: SalesFact.'Payment Date'
+	toColumn: DimDate.Date
+
+relationship c5203425-aca8-4c0f-82b3-701c2b5e5367
+	joinOnDateBehavior: datePartOnly
+	fromColumn: SalesFact.CurrentDate
+	toColumn: LocalDateTable_ee78f320-654a-4d1b-afed-dbe7a72f2b1f.Date
+

@@ -1,0 +1,74 @@
+table DimDate
+	lineageTag: 5eefa70b-1757-4127-9c3d-5bbf7a5f0afd
+
+	column Date
+		dataType: dateTime
+		lineageTag: ecd9f45e-a38c-4d2c-818f-b6c303952ae9
+		summarizeBy: none
+		sourceColumn: Date
+
+		variation Variation
+			isDefault
+			relationship: f5a1ec0f-2066-4504-92d7-5c7f5cb129e6
+			defaultHierarchy: LocalDateTable_d298c8ad-0864-472a-9d16-9927ac9f87a2.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: edff3141-a64d-42b2-a2f5-b767715cda12
+		summarizeBy: sum
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column Week
+		dataType: int64
+		formatString: 0
+		lineageTag: b80608bf-ca0c-464b-b07c-86a85fc94b42
+		summarizeBy: sum
+		sourceColumn: Week
+
+		annotation SummarizationSetBy = Automatic
+
+	column Day
+		dataType: string
+		lineageTag: 59fbafde-3867-4475-8eab-11cd7c7bd2a1
+		summarizeBy: none
+		sourceColumn: Day
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	partition DimDate-33dd1546-fe83-4939-950e-7e8d77f5fcbe = m
+		mode: import
+		source =
+				let
+				    DimDate = List.Dates(
+				    #date(2020,1,1),
+				    365,
+				    #duration(1,0,0,0)
+				 ),
+				    #"Converted to Table" = Table.FromList(DimDate, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Converted to Table",{{"Column1", type date}}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Changed Type",{{"Column1", "Date"}}),
+				    #"Duplicated Column" = Table.DuplicateColumn(#"Renamed Columns", "Date", "Date - Copy"),
+				    #"Extracted Year" = Table.TransformColumns(#"Duplicated Column",{{"Date - Copy", Date.Year, Int64.Type}}),
+				    #"Duplicated Column1" = Table.DuplicateColumn(#"Extracted Year", "Date", "Date - Copy.1"),
+				    #"Duplicated Column2" = Table.DuplicateColumn(#"Duplicated Column1", "Date", "Date - Copy.2"),
+				    #"Calculated Week of Year" = Table.TransformColumns(#"Duplicated Column2",{{"Date - Copy.1", Date.WeekOfYear, Int64.Type}}),
+				    #"Extracted Day Name" = Table.TransformColumns(#"Calculated Week of Year", {{"Date - Copy.2", each Date.DayOfWeekName(_), type text}}),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Extracted Day Name",{{"Date - Copy", "Year"}, {"Date - Copy.1", "Week"}, {"Date - Copy.2", "Day"}})
+				in
+				    #"Renamed Columns1"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

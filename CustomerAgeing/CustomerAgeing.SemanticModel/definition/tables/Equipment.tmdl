@@ -1,0 +1,39 @@
+table Equipment
+	lineageTag: 22b2a9b9-f6bf-4426-9d1f-5e95eeebc545
+
+	column 'Equipment Name'
+		dataType: string
+		lineageTag: 1212520c-dcd8-4a19-89a4-8c652fd4223e
+		summarizeBy: none
+		sourceColumn: Equipment Name
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column 'Equipment Manufacturer'
+		dataType: string
+		lineageTag: af8d74f6-c617-4ebd-9a3f-1060114fbc46
+		summarizeBy: none
+		sourceColumn: Equipment Manufacturer
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	partition Equipment-4cc5d822-1a74-47aa-aab4-2d71f8c1385a = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("D:\AnalyticsWithNaga\Videos\Projects\Video 2\Customer Ageing.xlsx"), null, true),
+				    Equipment_Sheet = Source{[Item="Equipment",Kind="Sheet"]}[Data],
+				    #"Changed Type" = Table.TransformColumnTypes(Equipment_Sheet,{{"Column1", type text}, {"Column2", type text}}),
+				    #"Promoted Headers" = Table.PromoteHeaders(#"Changed Type", [PromoteAllScalars=true]),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Promoted Headers",{{"Equipment Name", type text}, {"Equipment Manufacturer", type text}})
+				in
+				    #"Changed Type1"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

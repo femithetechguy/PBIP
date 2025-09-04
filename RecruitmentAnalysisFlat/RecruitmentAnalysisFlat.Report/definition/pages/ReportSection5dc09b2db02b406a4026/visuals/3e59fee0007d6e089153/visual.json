@@ -1,0 +1,2400 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "3e59fee0007d6e089153",
+  "position": {
+    "x": 6.76392572944297,
+    "y": 96.949602122015918,
+    "z": 1000,
+    "height": 728.24933687002647,
+    "width": 1280.6366047745357
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Columns": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Final Dataset"
+                    }
+                  },
+                  "Property": "Application Status"
+                }
+              },
+              "queryRef": "Final Dataset.Application Status",
+              "active": true
+            }
+          ]
+        },
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Final Dataset"
+                    }
+                  },
+                  "Property": "Vacancy_Name"
+                }
+              },
+              "queryRef": "Final Dataset.Vacancy_Name",
+              "active": true
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Final Dataset"
+                        }
+                      },
+                      "Property": "Application ID"
+                    }
+                  },
+                  "Function": 2
+                }
+              },
+              "queryRef": "CountNonNull(Final Dataset.Application ID)",
+              "displayName": "Nos"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Final Dataset"
+                    }
+                  },
+                  "Property": "%"
+                }
+              },
+              "queryRef": "Final Dataset.%"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "rowHeaders": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "'12'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "'12'"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "titleAlignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            },
+            "autoSizeColumnWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "83.95163990837469D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "total": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "ApplicantJobStatus"
+                        }
+                      },
+                      "Property": "ApplicationStatus"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "114.33234723121012D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "ApplicantJobStatus"
+                          }
+                        },
+                        "Property": "ApplicationStatus"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Active Application'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "138.45620576664305D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "ApplicantJobStatus"
+                          }
+                        },
+                        "Property": "ApplicationStatus"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Missing Documents'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "79.76392438383468D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "ApplicantJobStatus"
+                          }
+                        },
+                        "Property": "ApplicationStatus"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Suitable'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "100.89124511447378D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "ApplicantJobStatus"
+                          }
+                        },
+                        "Property": "ApplicationStatus"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Unsuitable'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "182D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "ApplicantJobStatus"
+                          }
+                        },
+                        "Property": "ApplicationStatus"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Absent from Interview'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "200D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "ApplicantJobStatus"
+                          }
+                        },
+                        "Property": "ApplicationStatus"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Awaiting Dept. Response'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "134D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "ApplicantJobStatus"
+                          }
+                        },
+                        "Property": "ApplicationStatus"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Eng. Test  Passed'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "136D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "ApplicantJobStatus"
+                          }
+                        },
+                        "Property": "ApplicationStatus"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Eng. Test Absent'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "128D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "ApplicantJobStatus"
+                          }
+                        },
+                        "Property": "ApplicationStatus"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Eng. Test Failed'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "131D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "ApplicantJobStatus"
+                          }
+                        },
+                        "Property": "ApplicationStatus"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Interview Failed'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "139D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "ApplicantJobStatus"
+                          }
+                        },
+                        "Property": "ApplicationStatus"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Interview Passed'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "108D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "ApplicantJobStatus"
+                          }
+                        },
+                        "Property": "ApplicationStatus"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Not Selected'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "172D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "ApplicantJobStatus"
+                          }
+                        },
+                        "Property": "ApplicationStatus"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Technical Test Absent'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "164D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "ApplicantJobStatus"
+                          }
+                        },
+                        "Property": "ApplicationStatus"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Technical Test Failed'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "171D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "ApplicantJobStatus"
+                          }
+                        },
+                        "Property": "ApplicationStatus"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Technical Test Passed'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "190D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "ApplicantJobStatus"
+                          }
+                        },
+                        "Property": "ApplicationStatus"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Absent from Interview'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "CountNonNull(Final Dataset.Application ID)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "190D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "ApplicantJobStatus"
+                          }
+                        },
+                        "Property": "ApplicationStatus"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Active Application'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "CountNonNull(Final Dataset.Application ID)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "190D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "ApplicantJobStatus"
+                          }
+                        },
+                        "Property": "ApplicationStatus"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Awaiting Dept. Response'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "CountNonNull(Final Dataset.Application ID)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "189D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "ApplicantJobStatus"
+                          }
+                        },
+                        "Property": "ApplicationStatus"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Eng. Test  Passed'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "CountNonNull(Final Dataset.Application ID)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "189D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "ApplicantJobStatus"
+                          }
+                        },
+                        "Property": "ApplicationStatus"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Eng. Test Absent'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "CountNonNull(Final Dataset.Application ID)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "190D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "ApplicantJobStatus"
+                          }
+                        },
+                        "Property": "ApplicationStatus"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Eng. Test Failed'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "CountNonNull(Final Dataset.Application ID)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "190D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "ApplicantJobStatus"
+                          }
+                        },
+                        "Property": "ApplicationStatus"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Interview Failed'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "CountNonNull(Final Dataset.Application ID)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "190D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "ApplicantJobStatus"
+                          }
+                        },
+                        "Property": "ApplicationStatus"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Interview Passed'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "CountNonNull(Final Dataset.Application ID)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "189D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "ApplicantJobStatus"
+                          }
+                        },
+                        "Property": "ApplicationStatus"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Not Selected'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "CountNonNull(Final Dataset.Application ID)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "189D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "ApplicantJobStatus"
+                          }
+                        },
+                        "Property": "ApplicationStatus"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Suitable'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "CountNonNull(Final Dataset.Application ID)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "190D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "ApplicantJobStatus"
+                          }
+                        },
+                        "Property": "ApplicationStatus"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Technical Test Absent'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "CountNonNull(Final Dataset.Application ID)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "190D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "ApplicantJobStatus"
+                          }
+                        },
+                        "Property": "ApplicationStatus"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Technical Test Failed'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "CountNonNull(Final Dataset.Application ID)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "190D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "ApplicantJobStatus"
+                          }
+                        },
+                        "Property": "ApplicationStatus"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Technical Test Passed'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "CountNonNull(Final Dataset.Application ID)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "189D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "ApplicantJobStatus"
+                          }
+                        },
+                        "Property": "ApplicationStatus"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Unsuitable'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "CountNonNull(Final Dataset.Application ID)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "189D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "total": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "ApplicantJobStatus"
+                        }
+                      },
+                      "Property": "ApplicationStatus"
+                    }
+                  }
+                ]
+              }
+            ],
+            "metadata": "CountNonNull(Final Dataset.Application ID)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "190D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "CountNonNull(Final Dataset.Application ID)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "153D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Final Dataset.Vacancy_Name"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "130.8355041068612D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Final Dataset"
+                          }
+                        },
+                        "Property": "Application Status"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Cleared Manager Round'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "CountNonNull(Final Dataset.Application ID)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "98.71763490772875D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Final Dataset"
+                          }
+                        },
+                        "Property": "Application Status"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Cleared Technical Round'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "CountNonNull(Final Dataset.Application ID)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "189D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Final Dataset"
+                          }
+                        },
+                        "Property": "Application Status"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Failed Technical Round'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "CountNonNull(Final Dataset.Application ID)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "190D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Final Dataset"
+                          }
+                        },
+                        "Property": "Application Status"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'HR Discussion'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "CountNonNull(Final Dataset.Application ID)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "105.47929158123031D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Final Dataset"
+                          }
+                        },
+                        "Property": "Application Status"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Rejected'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "CountNonNull(Final Dataset.Application ID)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "95.33680657097794D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Final Dataset"
+                          }
+                        },
+                        "Property": "Application Status"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Short Listed'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "CountNonNull(Final Dataset.Application ID)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "84.19432156072558D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "total": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Final Dataset"
+                        }
+                      },
+                      "Property": "Application Status"
+                    }
+                  }
+                ]
+              }
+            ],
+            "metadata": "CountNonNull(Final Dataset.Application ID)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "194D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Final Dataset"
+                          }
+                        },
+                        "Property": "Application Status"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Cleared Manager Round'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "196D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Final Dataset"
+                          }
+                        },
+                        "Property": "Application Status"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Cleared Technical Round'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "121D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Final Dataset"
+                          }
+                        },
+                        "Property": "Application Status"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Offer Released'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "76D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Final Dataset"
+                          }
+                        },
+                        "Property": "Application Status"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Rejected'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "103D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Final Dataset"
+                          }
+                        },
+                        "Property": "Application Status"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Short Listed'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "98D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "total": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Final Dataset"
+                        }
+                      },
+                      "Property": "Application Status"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "44D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Final Dataset"
+                          }
+                        },
+                        "Property": "Application Status"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Cleared Manager Round'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Final Dataset.%"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "86.34878458988227D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Final Dataset"
+                          }
+                        },
+                        "Property": "Application Status"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Cleared Technical Round'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Final Dataset.%"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "94.33680657097794D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Final Dataset"
+                          }
+                        },
+                        "Property": "Application Status"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Offer Released'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "CountNonNull(Final Dataset.Application ID)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "74.24913184991591D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Final Dataset"
+                          }
+                        },
+                        "Property": "Application Status"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Offer Released'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Final Dataset.%"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "72.73667525742012D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Final Dataset"
+                          }
+                        },
+                        "Property": "Application Status"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Rejected'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Final Dataset.%"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "78.7865016274033D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Final Dataset"
+                          }
+                        },
+                        "Property": "Application Status"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Short Listed'"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "metadata": "Final Dataset.%"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "87.3943827000937D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "total": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Final Dataset"
+                        }
+                      },
+                      "Property": "Application Status"
+                    }
+                  }
+                ]
+              }
+            ],
+            "metadata": "Final Dataset.%"
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "'12'"
+                }
+              }
+            },
+            "valuesOnRow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "bandedRowHeaders": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "grid": [
+        {
+          "properties": {
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "gridVerticalColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.3
+                    }
+                  }
+                }
+              }
+            },
+            "gridHorizontal": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "outlineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0.4
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTotals": [
+        {
+          "properties": {
+            "rowSubtotals": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "columnSubtotals": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "rowSubtotalsLabel": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Grand Total'"
+                }
+              }
+            },
+            "columnSubtotalsLabel": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Grand Total'"
+                }
+              }
+            },
+            "perRowLevel": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "perColumnLevel": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "rowSubtotalsPosition": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Top'"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0.2
+                    }
+                  }
+                }
+              }
+            },
+            "applyToHeaders": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "Column"
+          }
+        },
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0.2
+                    }
+                  }
+                }
+              }
+            },
+            "applyToHeaders": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "Row"
+          }
+        }
+      ],
+      "rowTotal": [
+        {
+          "properties": {
+            "applyToHeaders": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0.2
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnTotal": [
+        {
+          "properties": {
+            "applyToHeaders": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0.2
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Total Application By Status'"
+                }
+              }
+            },
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#000000'"
+                    }
+                  }
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "'16'"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Tahoma'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.2
+                    }
+                  }
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "3D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

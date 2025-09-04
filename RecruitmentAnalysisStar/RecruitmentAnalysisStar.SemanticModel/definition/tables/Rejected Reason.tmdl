@@ -1,0 +1,31 @@
+table 'Rejected Reason'
+	lineageTag: 2708b760-f9d8-41d5-be01-4ffc3f4214b6
+
+	column RejectedReason
+		dataType: string
+		lineageTag: 3a35c346-2a8a-4100-9d54-33a86b55ed3c
+		summarizeBy: none
+		sourceColumn: RejectedReason
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	partition 'Rejected Reason-ebde5815-7b3e-4749-9689-25efa6b36987' = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("D:\AnalyticsWithNaga\Source\Projects\V6 Application Tracking.xlsx"), null, true),
+				    #"Final Dataset_Sheet" = Source{[Item="Final Dataset",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(#"Final Dataset_Sheet", [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Application ID", Int64.Type}, {"Qualification", type text}, {"CandidateID", Int64.Type}, {"Name", type any}, {"Gender", type text}, {"CreatedDate", type date}, {"Application Status", type text}, {"VACANCY_ID", Int64.Type}, {"Vacancy_Name", type text}, {"VACANCY_START_DATE", type date}, {"VACANCY_END_DATE", type date}, {"LASTDATEFORAPPLICATION", type date}, {"RejectedReason", type any}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"Qualification", "Name", "Gender", "Vacancy_Name", "VACANCY_START_DATE", "VACANCY_END_DATE", "LASTDATEFORAPPLICATION", "Application ID", "CandidateID", "CreatedDate", "Application Status", "VACANCY_ID"}),
+				    Custom1 = Table.Distinct(#"Removed Columns"),
+				    #"Replaced Value" = Table.ReplaceValue(Custom1,null,"NA",Replacer.ReplaceValue,{"RejectedReason"})
+				in
+				    #"Replaced Value"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

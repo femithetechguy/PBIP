@@ -1,0 +1,28 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-IN
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBIDesktopVersion = 2.146.1254.0 (25.08)+791a7518fadc83da883d79322a2658aff57c8db3
+
+annotation PBI_QueryOrder = ["Final Dataset","Canditate","Vacancy","Rejected Reason"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table 'Final Dataset'
+ref table DateTableTemplate_40071ab9-385a-4bef-ac45-3f9837319eb9
+ref table LocalDateTable_3b8b473d-d3bf-434f-ab8d-e03942522ee4
+ref table Canditate
+ref table Vacancy
+ref table LocalDateTable_240c6666-2f67-4300-8f32-a64dd5e57e79
+ref table LocalDateTable_d90abc3f-d1a9-4db2-bc08-d5070b9f4c9e
+ref table LocalDateTable_9aad8d27-e1cb-46bc-a171-fadf26e0d95a
+ref table 'Rejected Reason'
+
+ref cultureInfo en-US
+

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "CustomerAgeing"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "c4f79f62-8e9f-439c-b202-8e2cead7a459"
+  }
+}

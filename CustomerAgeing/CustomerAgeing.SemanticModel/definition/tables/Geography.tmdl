@@ -1,0 +1,58 @@
+table Geography
+	lineageTag: 593ba5e3-a6f1-47fc-91d8-d66cadce1ca4
+
+	column Area
+		dataType: string
+		lineageTag: 9bf05628-2fd7-4f9e-9741-09e3fd5643fa
+		summarizeBy: none
+		sourceColumn: Area
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column 'Area Name'
+		dataType: string
+		lineageTag: 5be2ac56-804b-4294-92d2-9d0f0fc23e89
+		summarizeBy: none
+		sourceColumn: Area Name
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column 'Area Long'
+		dataType: string
+		lineageTag: 29c2ab56-3017-47ae-ae85-d4a369db9e75
+		summarizeBy: none
+		sourceColumn: Area Long
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column 'Area Lat'
+		dataType: string
+		lineageTag: 174d4ffb-c8d9-4595-9431-cb87a37afec0
+		summarizeBy: none
+		sourceColumn: Area Lat
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	partition Geography-1677437b-5b65-46f2-931c-0cf4f80f6efa = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("D:\AnalyticsWithNaga\Videos\Projects\Video 2\Customer Ageing.xlsx"), null, true),
+				    Geography_Sheet = Source{[Item="Geography",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(Geography_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Area", type text}, {"Area Name", type text}, {"Area Long", type any}, {"Area Lat", type any}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

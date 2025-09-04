@@ -1,0 +1,26 @@
+model Model
+	defaultMode: directQuery
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.146.1254.0 (25.08)+791a7518fadc83da883d79322a2658aff57c8db3
+
+annotation PBI_QueryOrder = ["Final Dataset"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table DateTableTemplate_77d5d215-dc6e-4dbd-888c-c549cde9b0ae
+ref table 'Final Dataset'
+ref table LocalDateTable_cc293c03-d4e9-4803-a57b-e7bf18ee0c0a
+ref table LocalDateTable_ac9ce137-cb13-4b94-b64e-0149ab41313e
+ref table LocalDateTable_30744d38-f5bf-4065-96cb-2bbab51faf37
+ref table LocalDateTable_b9f4e677-358e-4293-9d5c-5c6d001915a6
+
+ref cultureInfo en-US
+

@@ -1,0 +1,178 @@
+table Dimension
+	lineageTag: e6fe85e0-4a7d-4950-a37a-4f2d267201b7
+
+	column loan_key
+		dataType: int64
+		formatString: 0
+		lineageTag: c00335c0-855a-4723-b0aa-6bfdd9aa0a5f
+		summarizeBy: none
+		sourceColumn: loan_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_current
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 5615389f-2093-48f4-906c-79204c280f83
+		summarizeBy: none
+		sourceColumn: is_current
+
+		annotation SummarizationSetBy = Automatic
+
+	column branch_key
+		dataType: int64
+		formatString: 0
+		lineageTag: 3d7f7be3-1132-481f-ae91-c9d0fc26bd7f
+		summarizeBy: none
+		sourceColumn: branch_key
+
+		annotation SummarizationSetBy = User
+
+	column currency_code
+		dataType: string
+		lineageTag: 795c79de-e07d-4643-860a-55fa0cb53e79
+		summarizeBy: none
+		sourceColumn: currency_code
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column refinanced
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 10e2e962-4aff-4cfa-b4b6-d120ea761494
+		summarizeBy: none
+		sourceColumn: refinanced
+
+		annotation SummarizationSetBy = Automatic
+
+	column rebuild_no
+		dataType: int64
+		formatString: 0
+		lineageTag: d522a407-a347-4ffd-9142-0f3e68b1e37b
+		summarizeBy: sum
+		sourceColumn: rebuild_no
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_key
+		dataType: string
+		lineageTag: 995fb648-54bf-4ac6-88a0-5124123a4eec
+		summarizeBy: none
+		sourceColumn: product_key
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column disbursment_dateid
+		dataType: int64
+		formatString: 0
+		lineageTag: f8993fe3-3734-4842-91f1-da58a96055a4
+		summarizeBy: sum
+		sourceColumn: disbursment_dateid
+
+		annotation SummarizationSetBy = Automatic
+
+	column principal_amount
+		dataType: int64
+		formatString: 0
+		lineageTag: 51fb1745-0efb-4fe2-8095-a5f498d95f09
+		summarizeBy: sum
+		sourceColumn: principal_amount
+
+		annotation SummarizationSetBy = Automatic
+
+	column principal_amount_lccy
+		dataType: int64
+		formatString: 0
+		lineageTag: 8911a678-8d96-4d3d-8c3a-a9ad8224195e
+		summarizeBy: sum
+		sourceColumn: principal_amount_lccy
+
+		annotation SummarizationSetBy = Automatic
+
+	column interest_planned_amount_lccy
+		dataType: double
+		lineageTag: 1990b88f-2366-4dc2-96d7-d2e2a4d28d1e
+		summarizeBy: sum
+		sourceColumn: interest_planned_amount_lccy
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column principal_amount_eur
+		dataType: double
+		lineageTag: af5b99e8-7016-4ba5-8464-061d0c13e526
+		summarizeBy: sum
+		sourceColumn: principal_amount_eur
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column interest_planned_amount_eur
+		dataType: double
+		lineageTag: 50805ea9-b9de-4d97-a875-1ea7544858ea
+		summarizeBy: sum
+		sourceColumn: interest_planned_amount_eur
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column modification_dateid
+		dataType: int64
+		formatString: 0
+		lineageTag: dce02198-a8e3-42d0-bceb-a169622fbd7c
+		summarizeBy: sum
+		sourceColumn: modification_dateid
+
+		annotation SummarizationSetBy = Automatic
+
+	column modification_timestamp
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 375d9ba4-b462-4819-8928-8f626263a508
+		summarizeBy: none
+		sourceColumn: modification_timestamp
+
+		variation Variation
+			isDefault
+			relationship: f44807c2-a61a-4981-919d-2f87c05e6929
+			defaultHierarchy: LocalDateTable_b680acb2-c777-43fa-b303-53711fddbb5f.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column loan_officer_user_code
+		dataType: string
+		lineageTag: ada41ce5-0384-4cf8-be8a-363fce748ff1
+		summarizeBy: none
+		sourceColumn: loan_officer_user_code
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	partition Dimension-547209c9-c4d8-4e86-b6b1-700154fb14f0 = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("D:\AnalyticsWithNaga\Videos\Projects\Loan Details.xlsx"), null, true),
+				
+				    Sheet1_Sheet = Source{[Item="Sheet1",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(Sheet1_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"loan_key", Int64.Type}, {"is_current", type logical}, {"start_date", type datetime}, {"end_date", type any}, {"entity_code", type text}, {"branch_key", Int64.Type}, {"currency_code", type text}, {"refinanced", type logical}, {"rebuild_no", Int64.Type}, {"previous_contract_number", type any}, {"product_key", type text}, {"interest_rate", Int64.Type}, {"grace_period", Int64.Type}, {"disbursment_dateid", Int64.Type}, {"principal_amount", Int64.Type}, {"interest_planned_amount", type number}, {"principal_amount_lccy", Int64.Type}, {"interest_planned_amount_lccy", type number}, {"principal_amount_eur", type number}, {"interest_planned_amount_eur", type number}, {"maturity_dateid", Int64.Type}, {"loan_term", Int64.Type}, {"modification_dateid", Int64.Type}, {"modification_timestamp", type datetime}, {"loan_officer_user_code", type text}}),
+				    #"Sorted Rows" = Table.Sort(#"Changed Type",{{"disbursment_dateid", Order.Descending}}),
+				    #"Replaced Value" = Table.ReplaceValue(#"Sorted Rows",null,"#NA",Replacer.ReplaceValue,{"product_key"}),
+				    #"Replaced Value1" = Table.ReplaceValue(#"Replaced Value",null,"#NA",Replacer.ReplaceValue,{"loan_officer_user_code"}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Replaced Value1",{"start_date", "end_date", "entity_code", "previous_contract_number", "interest_rate", "grace_period", "interest_planned_amount", "maturity_dateid", "loan_term"})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

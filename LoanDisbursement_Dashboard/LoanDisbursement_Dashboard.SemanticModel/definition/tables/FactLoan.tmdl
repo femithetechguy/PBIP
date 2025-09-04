@@ -1,0 +1,617 @@
+table FactLoan
+	lineageTag: 22a8d7ab-1550-49f1-8607-23baf7f13e0e
+
+	measure 'PAR 30 %' = divide( [Outstanding 30 days More],[Outstanding All])
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 7fbbd2f7-2d9b-4db8-bb1b-2ce5f2d0f612
+
+		changedProperty = IsHidden
+
+	measure 'Outstanding All' = CALCULATE(Sum(FactLoan[principal_amount_outstanding_eur]),fILTER(aLL(FactLoan), FactLoan[loan_status_key]="OUTSTANDING"))
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: 5afbc02b-67fe-4b8c-8c6b-74ca7a0cea7e
+
+		changedProperty = IsHidden
+
+	measure 'Outstanding 30 days More' = CALCULATE( Sum( FactLoan[principal_amount_outstanding_eur]),FactLoan[overdue_days] >=30 , FactLoan[loan_status_key]="OUTSTANDING")
+		formatString: "€"\ #,0;-"€"\ #,0;"€"\ #,0
+		lineageTag: 6f9598fa-7f6f-439f-8be5-e9e23d2e6fb2
+
+		changedProperty = IsHidden
+
+	measure 'Last Month Disbursementamt' =
+			CALCULATE(Sum('FactLoan'[principal_amount_eur]),PREVIOUSMONTH(DimDate[FullDateAlternateKey].[Date])
+			)
+		formatString: "€"\ #,0.00;-"€"\ #,0.00;"€"\ #,0.00
+		lineageTag: b2c0339a-66fb-4a21-b0db-be89aef7b589
+
+		changedProperty = IsHidden
+
+	measure 'Last Month Loans' =
+			CALCULATE(COUNT('FactLoan'[loan_key]),PREVIOUSMONTH(DimDate[FullDateAlternateKey].[Date])
+			)
+		formatString: 0
+		lineageTag: 651e7689-5f0b-4469-94ad-b28c3c0cf070
+
+		changedProperty = IsHidden
+
+	measure 'Last  Disbursementamt New' = ```
+			
+			 Var PrevMonthStart = EOMONTH( MAXX(DimDate,DimDate[FullDateAlternateKey]),-2)+1
+			 Var PrevMonthEnd   = EOMONTH( MAXX(DimDate,DimDate[FullDateAlternateKey]),-1)
+			return
+			CALCULATE(Sum('FactLoan'[principal_amount_eur]),FIlter(ALL(DimDate),DimDate[FullDateAlternateKey].[Date]>=PrevMonthStart && DimDate[FullDateAlternateKey].[Date] <=PrevMonthEnd
+			))
+			```
+		lineageTag: 7f291542-2dd5-4d9f-bee2-198f1892a1a5
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Last Month Loan Count  New' = ```
+			
+			 Var PrevMonthStart = EOMONTH( MAXX(DimDate,DimDate[FullDateAlternateKey]),-2)+1
+			 Var PrevMonthEnd   = EOMONTH( MAXX(DimDate,DimDate[FullDateAlternateKey]),-1)
+			return
+			CALCULATE(COUNT(FactLoan[loan_key]),FIlter(ALL(DimDate),DimDate[FullDateAlternateKey].[Date]>=PrevMonthStart && DimDate[FullDateAlternateKey].[Date] <=PrevMonthEnd
+			))
+			```
+		formatString: 0
+		lineageTag: dd533dc3-e506-4d4c-863e-f13fa4348b72
+
+		changedProperty = IsHidden
+
+	column loan_snap_key
+		dataType: int64
+		formatString: 0
+		lineageTag: d4c51613-741c-40d7-a157-4bfe45448246
+		summarizeBy: sum
+		sourceColumn: loan_snap_key
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_current
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: db0e33c5-70b1-4de8-8d5f-1981b7daaf4f
+		summarizeBy: none
+		sourceColumn: is_current
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column start_date
+		dataType: dateTime
+		lineageTag: ea44a0a1-2b94-4ae4-bb9a-7eeeb9c69558
+		summarizeBy: none
+		sourceColumn: start_date
+
+		variation Variation
+			isDefault
+			relationship: a0b3dac4-19aa-4117-8f4f-d357652d1b1d
+			defaultHierarchy: LocalDateTable_b7a3cc9a-3f54-4b28-be69-093a9d0c8cc7.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column loan_status_key
+		dataType: string
+		lineageTag: c9ffdcea-6cca-4ced-a8bc-b0a33735bc7c
+		summarizeBy: none
+		sourceColumn: loan_status_key
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column loan_substatus_key
+		dataType: string
+		lineageTag: 2830a5b2-d683-49e8-9fec-534663015606
+		summarizeBy: none
+		sourceColumn: loan_substatus_key
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column currency_code
+		dataType: string
+		lineageTag: f9318b72-6736-491d-ae85-7cda3e876ad6
+		summarizeBy: none
+		sourceColumn: currency_code
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column principal_amount
+		dataType: int64
+		formatString: 0
+		lineageTag: 32dd3e83-5f53-4863-91f3-75a68382b78a
+		summarizeBy: sum
+		sourceColumn: principal_amount
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column principal_amount_paid
+		dataType: double
+		lineageTag: d81753d9-3776-4dd9-81f4-18eafe589904
+		summarizeBy: sum
+		sourceColumn: principal_amount_paid
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column principal_amount_outstanding
+		dataType: double
+		lineageTag: acd76fce-0dee-4f41-ab90-3badf8973437
+		summarizeBy: sum
+		sourceColumn: principal_amount_outstanding
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column interest_amount_planned
+		dataType: double
+		lineageTag: 6a67a950-395b-4871-a00a-e0b3c78516ae
+		summarizeBy: sum
+		sourceColumn: interest_amount_planned
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column interest_amount_paid
+		dataType: double
+		lineageTag: c1785f7e-060b-44c8-a893-6c77c3845ef0
+		summarizeBy: sum
+		sourceColumn: interest_amount_paid
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column interest_amount_accrued
+		dataType: int64
+		formatString: 0
+		lineageTag: f7720be5-6de4-4617-ba19-2b04d4b55905
+		summarizeBy: sum
+		sourceColumn: interest_amount_accrued
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column penalty_amount
+		dataType: double
+		lineageTag: 256bdaee-8fc3-426a-b035-32d7ec74a6d1
+		summarizeBy: sum
+		sourceColumn: penalty_amount
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column penalty_amount_paid
+		dataType: double
+		lineageTag: 3488e378-afff-4f28-80e0-ab93936830bd
+		summarizeBy: sum
+		sourceColumn: penalty_amount_paid
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column penalty_amount_waived
+		dataType: double
+		lineageTag: 4a55162e-ff30-4760-8f47-2244572356fa
+		summarizeBy: sum
+		sourceColumn: penalty_amount_waived
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column charge_amount
+		dataType: double
+		lineageTag: 303d8891-7e17-4ccc-993c-16815f3355b9
+		summarizeBy: sum
+		sourceColumn: charge_amount
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column charge_amount_paid
+		dataType: int64
+		formatString: 0
+		lineageTag: 3f269660-c1a8-4c39-a2fa-c1a18c0fcd58
+		summarizeBy: sum
+		sourceColumn: charge_amount_paid
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column principal_amount_lccy
+		dataType: int64
+		formatString: 0
+		lineageTag: 8d3dfb38-ec6d-4362-b450-fa5591b182ab
+		summarizeBy: sum
+		sourceColumn: principal_amount_lccy
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column principal_amount_paid_lccy
+		dataType: double
+		lineageTag: 8c2d3c48-a44f-4e1f-b737-b1e2489d98f0
+		summarizeBy: sum
+		sourceColumn: principal_amount_paid_lccy
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column principal_amount_outstanding_lccy
+		dataType: double
+		lineageTag: 9777831c-1fcf-4df7-85c6-be7a8e83bf75
+		summarizeBy: sum
+		sourceColumn: principal_amount_outstanding_lccy
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column interest_amount_planned_lccy
+		dataType: double
+		lineageTag: 7c00b092-d3a5-43ea-b3db-afc985113aaa
+		summarizeBy: sum
+		sourceColumn: interest_amount_planned_lccy
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column interest_amount_paid_lccy
+		dataType: double
+		lineageTag: 0d62eec3-cec7-48ea-91d0-0534f51a6b7e
+		summarizeBy: sum
+		sourceColumn: interest_amount_paid_lccy
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column interest_amount_accrued_lccy
+		dataType: int64
+		formatString: 0
+		lineageTag: a5daba4b-6473-4136-a943-27d2163dbc88
+		summarizeBy: sum
+		sourceColumn: interest_amount_accrued_lccy
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column penalty_amount_lccy
+		dataType: double
+		lineageTag: e084fe78-87fc-4ac8-b370-87765f3c1a81
+		summarizeBy: sum
+		sourceColumn: penalty_amount_lccy
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column penalty_amount_paid_lccy
+		dataType: double
+		lineageTag: fa68a772-3337-4f09-9ed9-b430e7bf7574
+		summarizeBy: sum
+		sourceColumn: penalty_amount_paid_lccy
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column penalty_amount_waived_lccy
+		dataType: double
+		lineageTag: fde1728b-738d-401e-9c14-a669f6f8cc47
+		summarizeBy: sum
+		sourceColumn: penalty_amount_waived_lccy
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column charge_amount_lccy
+		dataType: double
+		lineageTag: 7763a5a0-536c-490f-8cdd-de998e9fd26a
+		summarizeBy: sum
+		sourceColumn: charge_amount_lccy
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column charge_amount_paid_lccy
+		dataType: int64
+		formatString: 0
+		lineageTag: abc792ab-a96a-4640-8ab9-c63b74ba4866
+		summarizeBy: sum
+		sourceColumn: charge_amount_paid_lccy
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column principal_amount_eur
+		dataType: double
+		formatString: "€"\ #,0.00;-"€"\ #,0.00;"€"\ #,0.00
+		lineageTag: 1738f291-f34f-403b-8282-4035787156c6
+		summarizeBy: sum
+		sourceColumn: principal_amount_eur
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column principal_amount_paid_eur
+		dataType: double
+		lineageTag: 37b767c2-828a-4e64-8417-34ed588dfa32
+		summarizeBy: sum
+		sourceColumn: principal_amount_paid_eur
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column principal_amount_outstanding_eur
+		dataType: double
+		formatString: "€"\ #,0.00;-"€"\ #,0.00;"€"\ #,0.00
+		lineageTag: 2a7c8f6c-b2e1-4c06-9c04-617255698034
+		summarizeBy: sum
+		sourceColumn: principal_amount_outstanding_eur
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column interest_amount_planned_eur
+		dataType: double
+		lineageTag: 008727fb-b046-43ec-a8db-e6bcbc90b7f7
+		summarizeBy: sum
+		sourceColumn: interest_amount_planned_eur
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column interest_amount_paid_eur
+		dataType: double
+		lineageTag: 83985f0f-d093-496b-b3ca-54e489852364
+		summarizeBy: sum
+		sourceColumn: interest_amount_paid_eur
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column interest_amount_accrued_eur
+		dataType: int64
+		formatString: 0
+		lineageTag: 948e2e73-838f-475e-b617-192c65ae6830
+		summarizeBy: sum
+		sourceColumn: interest_amount_accrued_eur
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column penalty_amount_eur
+		dataType: double
+		lineageTag: e869d7ba-e670-4ddb-bb69-5948a7ad24cd
+		summarizeBy: sum
+		sourceColumn: penalty_amount_eur
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column penalty_amount_paid_eur
+		dataType: double
+		lineageTag: 16039fe7-22d8-40ca-9b0e-4b339085173a
+		summarizeBy: sum
+		sourceColumn: penalty_amount_paid_eur
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column penalty_amount_waived_eur
+		dataType: double
+		lineageTag: f8b54691-ff22-4c89-9e56-01b16baa9a37
+		summarizeBy: sum
+		sourceColumn: penalty_amount_waived_eur
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column charge_amount_eur
+		dataType: double
+		lineageTag: 0b8d888e-1f8e-4963-b154-3e15317efcf1
+		summarizeBy: sum
+		sourceColumn: charge_amount_eur
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column charge_amount_paid_eur
+		dataType: double
+		lineageTag: 977ce3aa-cc67-48d2-bbaa-4d33d8db69e2
+		summarizeBy: sum
+		sourceColumn: charge_amount_paid_eur
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column overdue_days
+		dataType: int64
+		formatString: 0
+		lineageTag: 20556183-b502-43e3-933d-933846be00fc
+		summarizeBy: sum
+		sourceColumn: overdue_days
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column overdue_days_max
+		dataType: int64
+		formatString: 0
+		lineageTag: 9eeab383-d004-4304-86bb-9b658c83f897
+		summarizeBy: sum
+		sourceColumn: overdue_days_max
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column fx_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 79b43ec5-78dd-4c5f-b225-1032f32e21f6
+		summarizeBy: none
+		sourceColumn: fx_date
+
+		variation Variation
+			isDefault
+			relationship: 85766709-2eaa-4c73-b0ed-6e52b192c527
+			defaultHierarchy: LocalDateTable_483766a5-e481-401e-a681-8ac10e4f673d.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column DisbursementDateId
+		dataType: int64
+		formatString: 0
+		lineageTag: d9bf93a5-c32f-42d3-9312-080b9f73bad0
+		summarizeBy: sum
+		sourceColumn: DisbursementDateId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column loan_key
+		dataType: int64
+		formatString: 0
+		lineageTag: e4a53456-1989-404c-acdc-93eb2f4aff61
+		summarizeBy: none
+		sourceColumn: loan_key
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition FactLoan-6cb8ab60-e740-4ce7-a58d-a78741d69594 = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("D:\AnalyticsWithNaga\Videos\Projects\Loans.xlsx"), null, true),
+				    Sheet1_Sheet = Source{[Item="Sheet1",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(Sheet1_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"loan_snap_key", Int64.Type}, {"is_current", type logical}, {"start_date", type datetime}, {"end_date", type any}, {"entity_code", type text}, {"loan_key", Int64.Type}, {"business_dateid", Int64.Type}, {"loan_status_key", type text}, {"loan_substatus_key", type text}, {"currency_code", type text}, {"principal_amount", Int64.Type}, {"principal_amount_paid", type number}, {"principal_amount_outstanding", type number}, {"interest_amount_planned", type number}, {"interest_amount_paid", type number}, {"interest_amount_accrued", Int64.Type}, {"penalty_amount", type number}, {"penalty_amount_paid", type number}, {"penalty_amount_waived", type number}, {"charge_amount", type number}, {"charge_amount_paid", Int64.Type}, {"principal_amount_lccy", Int64.Type}, {"principal_amount_paid_lccy", type number}, {"principal_amount_outstanding_lccy", type number}, {"interest_amount_planned_lccy", type number}, {"interest_amount_paid_lccy", type number}, {"interest_amount_accrued_lccy", Int64.Type}, {"penalty_amount_lccy", type number}, {"penalty_amount_paid_lccy", type number}, {"penalty_amount_waived_lccy", type number}, {"charge_amount_lccy", type number}, {"charge_amount_paid_lccy", Int64.Type}, {"principal_amount_eur", type number}, {"principal_amount_paid_eur", type number}, {"principal_amount_outstanding_eur", type number}, {"interest_amount_planned_eur", type number}, {"interest_amount_paid_eur", type number}, {"interest_amount_accrued_eur", Int64.Type}, {"penalty_amount_eur", type number}, {"penalty_amount_paid_eur", type number}, {"penalty_amount_waived_eur", type number}, {"charge_amount_eur", type number}, {"charge_amount_paid_eur", type number}, {"overdue_days", Int64.Type}, {"overdue_days_max", Int64.Type}, {"finish_dateid", Int64.Type}, {"last_repayment_dateid", Int64.Type}, {"write_off_dateid", Int64.Type}, {"fx_date", type date}}),
+				    #"Merged Queries" = Table.NestedJoin(#"Changed Type", {"loan_key"}, Dimension, {"loan_key"}, "Dimension", JoinKind.LeftOuter),
+				    #"Expanded Dimension" = Table.ExpandTableColumn(#"Merged Queries", "Dimension", {"disbursment_dateid"}, {"Dimension.disbursment_dateid"}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Expanded Dimension",{{"Dimension.disbursment_dateid", "DisbursementDateId"}}),
+				    #"Merged Queries1" = Table.NestedJoin(#"Renamed Columns", {"loan_key"}, Dimension, {"loan_key"}, "Dimension", JoinKind.LeftOuter),
+				    #"Expanded Dimension1" = Table.ExpandTableColumn(#"Merged Queries1", "Dimension", {"loan_key"}, {"loan_key.1"}),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Expanded Dimension1",{{"loan_key.1", "ValidLoans"}}),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Renamed Columns1",{{"ValidLoans", type text}}),
+				    #"Added Conditional Column" = Table.AddColumn(#"Changed Type1", "Custom", each if [ValidLoans] = null then 0 else 1),
+				    #"Filtered Rows" = Table.SelectRows(#"Added Conditional Column", each true),
+				    #"Removed Columns" = Table.RemoveColumns(#"Filtered Rows",{"ValidLoans"}),
+				    #"Renamed Columns2" = Table.RenameColumns(#"Removed Columns",{{"Custom", "ValidLoan"}}),
+				    #"Removed Columns1" = Table.RemoveColumns(#"Renamed Columns2",{"end_date", "entity_code",  "business_dateid", "finish_dateid", "last_repayment_dateid", "write_off_dateid", "ValidLoan"})
+				in
+				    #"Removed Columns1"
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

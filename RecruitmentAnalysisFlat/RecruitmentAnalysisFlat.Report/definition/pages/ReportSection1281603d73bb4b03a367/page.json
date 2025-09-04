@@ -1,0 +1,201 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
+  "name": "ReportSection1281603d73bb4b03a367",
+  "displayName": "Application Details",
+  "displayOption": "FitToPage",
+  "height": 850,
+  "width": 1315,
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "Filter3877bfbb2f57dfff7ad7",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Final Dataset"
+              }
+            },
+            "Property": "Application Status"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "f",
+              "Entity": "Final Dataset",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "f"
+                          }
+                        },
+                        "Property": "Application Status"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'Cleared Manager Round'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "Drillthrough"
+      },
+      {
+        "name": "Filter639f797ec24d6ceb10f5",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Final Dataset"
+              }
+            },
+            "Property": "Vacancy_Name"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
+      },
+      {
+        "name": "Filtere9b07b403cb72a20941e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Final Dataset"
+              }
+            },
+            "Property": "RejectedReason"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
+      },
+      {
+        "name": "Filter1e45235cb17f68474553",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Final Dataset"
+              }
+            },
+            "Property": "Gender"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
+      }
+    ]
+  },
+  "pageBinding": {
+    "name": "Pod1",
+    "type": "Drillthrough",
+    "parameters": [
+      {
+        "name": "Param_Filter3877bfbb2f57dfff7ad7",
+        "boundFilter": "Filter3877bfbb2f57dfff7ad7",
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Final Dataset"
+              }
+            },
+            "Property": "Application Status"
+          }
+        }
+      },
+      {
+        "name": "Param_Filter639f797ec24d6ceb10f5",
+        "boundFilter": "Filter639f797ec24d6ceb10f5",
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Final Dataset"
+              }
+            },
+            "Property": "Vacancy_Name"
+          }
+        }
+      },
+      {
+        "name": "Param_Filtere9b07b403cb72a20941e",
+        "boundFilter": "Filtere9b07b403cb72a20941e",
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Final Dataset"
+              }
+            },
+            "Property": "RejectedReason"
+          }
+        }
+      },
+      {
+        "name": "Param_Filter1e45235cb17f68474553",
+        "boundFilter": "Filter1e45235cb17f68474553",
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Final Dataset"
+              }
+            },
+            "Property": "Gender"
+          }
+        }
+      }
+    ]
+  },
+  "objects": {
+    "background": [
+      {
+        "properties": {
+          "color": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "ThemeDataColor": {
+                    "ColorId": 0,
+                    "Percent": -0.1
+                  }
+                }
+              }
+            }
+          },
+          "transparency": {
+            "expr": {
+              "Literal": {
+                "Value": "0D"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "visibility": "HiddenInViewMode"
+}

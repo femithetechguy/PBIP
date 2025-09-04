@@ -1,0 +1,87 @@
+table 'Final Dataset'
+	lineageTag: 82708158-4659-473d-b75c-139e2ca7093b
+
+	measure 'Short Listed' = CALCULATE( COUNTROWS('Final Dataset'), 'Final Dataset'[Application Status] ="Short Listed")
+		formatString: 0
+		lineageTag: bbef0259-a559-4c05-8795-e8afb1a60564
+
+	column 'Application ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: c61bab1a-93a0-4c50-bb1f-f44c506b1116
+		summarizeBy: count
+		sourceColumn: Application ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CandidateID
+		dataType: int64
+		formatString: 0
+		lineageTag: 52e4241e-812d-413c-ac29-aefe12ac12a0
+		summarizeBy: none
+		sourceColumn: CandidateID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: df59fcc2-8b41-46af-8231-90841e6d8430
+		summarizeBy: none
+		sourceColumn: CreatedDate
+
+		variation Variation
+			isDefault
+			relationship: 17ee6898-594b-4abf-8bc2-8ce531f9bd5c
+			defaultHierarchy: LocalDateTable_3b8b473d-d3bf-434f-ab8d-e03942522ee4.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Application Status'
+		dataType: string
+		lineageTag: 3f107ae8-83de-4ede-a151-4a4f195bfaf0
+		summarizeBy: none
+		sourceColumn: Application Status
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column VACANCY_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: 0fa6c126-703a-43f6-b956-0fcc499b4f15
+		summarizeBy: none
+		sourceColumn: VACANCY_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column RejectedReason
+		dataType: string
+		lineageTag: 7ffeb631-fbb6-49da-a50a-50a7c784f922
+		summarizeBy: none
+		sourceColumn: RejectedReason
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	partition 'Final Dataset-19eba8eb-b272-4bbc-b2cb-0c642b64fc96' = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("D:\AnalyticsWithNaga\Source\Projects\V6 Application Tracking.xlsx"), null, true),
+				    #"Final Dataset_Sheet" = Source{[Item="Final Dataset",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(#"Final Dataset_Sheet", [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Application ID", Int64.Type}, {"Qualification", type text}, {"CandidateID", Int64.Type}, {"Name", type any}, {"Gender", type text}, {"CreatedDate", type date}, {"Application Status", type text}, {"VACANCY_ID", Int64.Type}, {"Vacancy_Name", type text}, {"VACANCY_START_DATE", type date}, {"VACANCY_END_DATE", type date}, {"LASTDATEFORAPPLICATION", type date}, {"RejectedReason", type any}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"Qualification", "Name", "Gender", "Vacancy_Name", "VACANCY_START_DATE", "VACANCY_END_DATE", "LASTDATEFORAPPLICATION"}),
+				    #"Replaced Value" = Table.ReplaceValue(#"Removed Columns",null,"NA",Replacer.ReplaceValue,{"RejectedReason"})
+				in
+				    #"Replaced Value"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

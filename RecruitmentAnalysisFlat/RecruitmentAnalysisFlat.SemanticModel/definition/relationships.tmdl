@@ -1,0 +1,20 @@
+relationship 819679dd-7536-4e9a-9699-863bdbeddb50
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Final Dataset'.CreatedDate
+	toColumn: LocalDateTable_cc293c03-d4e9-4803-a57b-e7bf18ee0c0a.Date
+
+relationship 173f831b-de8c-4e8f-99a2-33d462470b3e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Final Dataset'.VACANCY_START_DATE
+	toColumn: LocalDateTable_ac9ce137-cb13-4b94-b64e-0149ab41313e.Date
+
+relationship 04437667-7814-4fa2-b381-9c605fd2b31c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Final Dataset'.VACANCY_END_DATE
+	toColumn: LocalDateTable_30744d38-f5bf-4065-96cb-2bbab51faf37.Date
+
+relationship e1d2a017-690a-49cf-a8f5-e1585a5aeb6a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Final Dataset'.LASTDATEFORAPPLICATION
+	toColumn: LocalDateTable_b9f4e677-358e-4293-9d5c-5c6d001915a6.Date
+

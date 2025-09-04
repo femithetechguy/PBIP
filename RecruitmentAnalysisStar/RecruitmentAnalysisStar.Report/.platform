@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "RecruitmentAnalysisStar"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "fb03fe15-d1d6-444e-90fe-fb973dac9ab0"
+  }
+}

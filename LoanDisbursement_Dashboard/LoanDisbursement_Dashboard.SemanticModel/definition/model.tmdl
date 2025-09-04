@@ -1,0 +1,27 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-IN
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.146.1254.0 (25.08)+791a7518fadc83da883d79322a2658aff57c8db3
+
+annotation PBI_QueryOrder = ["FactLoan","Dimension","DimDate","MaxDisbursement"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table Dimension
+ref table DateTableTemplate_29c3b289-bc6a-41e0-9e9b-04be9a26183f
+ref table LocalDateTable_b680acb2-c777-43fa-b303-53711fddbb5f
+ref table FactLoan
+ref table LocalDateTable_b7a3cc9a-3f54-4b28-be69-093a9d0c8cc7
+ref table LocalDateTable_483766a5-e481-401e-a681-8ac10e4f673d
+ref table DimDate
+ref table LocalDateTable_64ed4c30-4f19-4765-ad75-7eec422467e7
+
+ref cultureInfo en-US
+

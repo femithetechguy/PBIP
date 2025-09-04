@@ -1,0 +1,32 @@
+relationship 17ee6898-594b-4abf-8bc2-8ce531f9bd5c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Final Dataset'.CreatedDate
+	toColumn: LocalDateTable_3b8b473d-d3bf-434f-ab8d-e03942522ee4.Date
+
+relationship 5a453cde-3f76-4974-8cd1-30b02a867d82
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Vacancy.VACANCY_START_DATE
+	toColumn: LocalDateTable_240c6666-2f67-4300-8f32-a64dd5e57e79.Date
+
+relationship 0a209fa6-44ff-4b4c-8f02-291db42ba473
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Vacancy.VACANCY_END_DATE
+	toColumn: LocalDateTable_d90abc3f-d1a9-4db2-bc08-d5070b9f4c9e.Date
+
+relationship f6e97909-163e-4d94-bd84-fa0ebe66632a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Vacancy.LASTDATEFORAPPLICATION
+	toColumn: LocalDateTable_9aad8d27-e1cb-46bc-a171-fadf26e0d95a.Date
+
+relationship 084b6d52-8351-4872-b47e-b3326381ab07
+	fromColumn: 'Final Dataset'.RejectedReason
+	toColumn: 'Rejected Reason'.RejectedReason
+
+relationship 60ff491e-5cb5-4241-ac95-607d1ae4fde9
+	fromColumn: 'Final Dataset'.CandidateID
+	toColumn: Canditate.CandidateID
+
+relationship ac379377-9647-4532-89c3-1ef46d89e903
+	fromColumn: 'Final Dataset'.VACANCY_ID
+	toColumn: Vacancy.VACANCY_ID
+

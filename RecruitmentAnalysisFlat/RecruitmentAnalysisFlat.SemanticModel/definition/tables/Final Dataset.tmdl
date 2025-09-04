@@ -1,0 +1,193 @@
+table 'Final Dataset'
+	lineageTag: 6226f704-cf94-4edf-a20a-f151ee5ecac7
+
+	measure 'Short Listed' = Calculate(DISTINCTCOUNT('Final Dataset'[Application ID]),'Final Dataset'[Application Status]="Short Listed")
+		formatString: 0
+		lineageTag: a3a15a87-6315-4d94-af02-155853eb55b2
+
+	measure Rejected = Calculate(DISTINCTCOUNT('Final Dataset'[Application ID]),'Final Dataset'[Application Status]="Rejected")
+		formatString: 0
+		lineageTag: fd8af5f4-4ece-43f8-9a67-0f39bc3c63f4
+
+	measure 'Total Applicants' = IF(ISBLANK(DISTINCTCOUNT('Final Dataset'[Application ID])),0,DISTINCTCOUNT('Final Dataset'[Application ID]))
+		formatString: 0
+		lineageTag: 40512199-88dc-489b-91e8-c4fbce5bb74d
+
+	measure % = ```
+			
+			 Var Cnt= CALCULATE(COUNTA('Final Dataset'[Application ID]))
+			 var GT= CALCULATE(COUNTA('Final Dataset'[Application ID]), REMOVEFILTERS('Final Dataset'[Application Status]))
+			
+			return Divide (Cnt,GT)
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 4a113ea0-d4ac-4c1b-b760-71ccde9b8a71
+
+	measure 'Short Listed %' = divide( [Short Listed],[Total Applicants])
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 4b86afb2-4309-4883-be46-956d0ea0bdfd
+
+	column 'Application ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: 0f0209d2-da5a-445c-8b35-faa477be9408
+		summarizeBy: count
+		sourceColumn: Application ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Qualification
+		dataType: string
+		lineageTag: a0f63cca-7fea-4af7-af90-13089e15822f
+		summarizeBy: none
+		sourceColumn: Qualification
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column CandidateID
+		dataType: int64
+		formatString: 0
+		lineageTag: ed9d991e-00c0-4c9c-af4f-3c01f6f4c892
+		summarizeBy: count
+		sourceColumn: CandidateID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		lineageTag: cd240597-fdad-436b-b746-2b0860ab7f24
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column Gender
+		dataType: string
+		lineageTag: 702de9e0-0584-4582-a836-43e386b25a0e
+		summarizeBy: none
+		sourceColumn: Gender
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column CreatedDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 8b253ce9-700a-4b2b-b171-e9e6879d5cd5
+		summarizeBy: none
+		sourceColumn: CreatedDate
+
+		variation Variation
+			isDefault
+			relationship: 819679dd-7536-4e9a-9699-863bdbeddb50
+			defaultHierarchy: LocalDateTable_cc293c03-d4e9-4803-a57b-e7bf18ee0c0a.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Application Status'
+		dataType: string
+		lineageTag: ef385a1e-fca4-4a94-a7e9-d40e49fa8526
+		summarizeBy: none
+		sourceColumn: Application Status
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column VACANCY_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: 026b4bea-30e8-475f-b6ef-d0dfd91d5bdd
+		summarizeBy: count
+		sourceColumn: VACANCY_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Vacancy_Name
+		dataType: string
+		lineageTag: 2434b095-b120-4b3a-8880-e037dafd247c
+		summarizeBy: none
+		sourceColumn: Vacancy_Name
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column VACANCY_START_DATE
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: ccf5dff3-61c9-4085-a789-545a74ef155f
+		summarizeBy: none
+		sourceColumn: VACANCY_START_DATE
+
+		variation Variation
+			isDefault
+			relationship: 173f831b-de8c-4e8f-99a2-33d462470b3e
+			defaultHierarchy: LocalDateTable_ac9ce137-cb13-4b94-b64e-0149ab41313e.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column VACANCY_END_DATE
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 23802cb2-9060-4582-8f28-cf164e010921
+		summarizeBy: none
+		sourceColumn: VACANCY_END_DATE
+
+		variation Variation
+			isDefault
+			relationship: 04437667-7814-4fa2-b381-9c605fd2b31c
+			defaultHierarchy: LocalDateTable_30744d38-f5bf-4065-96cb-2bbab51faf37.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column LASTDATEFORAPPLICATION
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 0d8c2659-d8b0-449b-b238-a186a61593e1
+		summarizeBy: none
+		sourceColumn: LASTDATEFORAPPLICATION
+
+		variation Variation
+			isDefault
+			relationship: e1d2a017-690a-49cf-a8f5-e1585a5aeb6a
+			defaultHierarchy: LocalDateTable_b9f4e677-358e-4293-9d5c-5c6d001915a6.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column RejectedReason
+		dataType: string
+		lineageTag: 9940560f-1348-4960-81ee-f8a94223fa8d
+		summarizeBy: none
+		sourceColumn: RejectedReason
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	partition 'Final Dataset-30add829-869f-4c99-885c-644782f924c6' = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("D:\AnalyticsWithNaga\Source\Projects\V6 Recruitment.xlsx"), null, true),
+				    #"Final Dataset_Sheet" = Source{[Item="Final Dataset",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(#"Final Dataset_Sheet", [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Application ID", Int64.Type}, {"Qualification", type text}, {"CandidateID", Int64.Type}, {"Name", type any}, {"Gender", type text}, {"CreatedDate", type date}, {"Application Status", type text}, {"VACANCY_ID", Int64.Type}, {"Vacancy_Name", type text}, {"VACANCY_START_DATE", type date}, {"VACANCY_END_DATE", type date}, {"LASTDATEFORAPPLICATION", type date}, {"RejectedReason", type any}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

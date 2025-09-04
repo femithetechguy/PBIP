@@ -1,0 +1,41 @@
+{
+  "version": "1.0.0",
+  "diagrams": [
+    {
+      "isDefault": true,
+      "layout": {
+        "boundingBoxHeight": 393.4,
+        "boundingBoxWidth": 504,
+        "boundingBoxPosition": {
+          "x": 324.1,
+          "y": 0
+        },
+        "nodes": [
+          {
+            "layedOut": true,
+            "nodeIndex": "Final Dataset",
+            "height": 300,
+            "width": 180,
+            "left": 324.1,
+            "top": 0
+          },
+          {
+            "layedOut": true,
+            "nodeIndex": "Vacancy",
+            "height": 128,
+            "width": 180,
+            "left": 648.1,
+            "top": 265.4
+          }
+        ]
+      },
+      "name": "All tables",
+      "tables": [
+        "Final Dataset",
+        "Vacancy"
+      ],
+      "zoomValue": 83.166666666666671
+    }
+  ],
+  "showIntroduceNewModelViewDialog": true
+}

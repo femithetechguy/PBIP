@@ -1,0 +1,32 @@
+cultureInfo en-US
+
+	linguisticMetadata =
+			{
+			  "Version": "1.0.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "applicantjobstatus.total_applicants": {
+			      "Binding": {
+			        "ConceptualEntity": "Final Dataset",
+			        "ConceptualProperty": "Total Applicants"
+			      },
+			      "State": "Generated"
+			    },
+			    "applicantjobstatus.accepted": {
+			      "Binding": {
+			        "ConceptualEntity": "Final Dataset",
+			        "ConceptualProperty": "Short Listed"
+			      },
+			      "State": "Generated"
+			    },
+			    "applicantjobstatus.rejected": {
+			      "Binding": {
+			        "ConceptualEntity": "Final Dataset",
+			        "ConceptualProperty": "Rejected"
+			      },
+			      "State": "Generated"
+			    }
+			  }
+			}
+		contentType: json
+

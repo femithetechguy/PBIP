@@ -1,0 +1,27 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-IN
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.146.1254.0 (25.08)+791a7518fadc83da883d79322a2658aff57c8db3
+
+annotation PBI_QueryOrder = ["SalesFact","Customer","Equipment","Geography","DimDate"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table DateTableTemplate_243644ef-8dcb-426c-a0af-67fd5111cc58
+ref table SalesFact
+ref table DimDate
+ref table Geography
+ref table Equipment
+ref table Customer
+ref table LocalDateTable_d298c8ad-0864-472a-9d16-9927ac9f87a2
+ref table LocalDateTable_ee78f320-654a-4d1b-afed-dbe7a72f2b1f
+
+ref cultureInfo en-US
+

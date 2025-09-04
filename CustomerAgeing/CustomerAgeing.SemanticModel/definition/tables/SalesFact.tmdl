@@ -1,0 +1,179 @@
+table SalesFact
+	lineageTag: 1580922f-fa1a-4def-8267-c87669a671e7
+
+	measure 'Net Profit' = Sum(SalesFact[Net Revenue]) - Sum(SalesFact[Deduction])
+		formatString: "₹"\ #,0;-"₹"\ #,0;"₹"\ #,0
+		lineageTag: 8a418cd6-1845-44a0-97df-bc1ecc966c45
+
+	measure Today = Today()
+		lineageTag: adc93b7f-9d41-4388-af47-65135b457fcb
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	measure 'No due Customers' = CALCULATE( DISTINCTCOUNT(SalesFact[Customer]),SalesFact[Status]="Unpaid")
+		formatString: 0
+		lineageTag: d937e178-3c48-40c8-abc1-d36621b09c64
+
+	measure 'Total Customers' = CALCULATE( DISTINCTCOUNT(SalesFact[Customer]),All(SalesFact[Status]))
+		formatString: 0
+		lineageTag: 7494e256-194b-4638-bc10-aa1f86a8d3a9
+
+	column TXNumber
+		dataType: string
+		lineageTag: baeef98a-e6b0-44bd-8566-eed9890f65b5
+		summarizeBy: none
+		sourceColumn: TXNumber
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column Equipment
+		dataType: string
+		lineageTag: 8144b276-d257-4d7a-a39f-9bbb31c9fcc2
+		summarizeBy: none
+		sourceColumn: Equipment
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column Customer
+		dataType: string
+		lineageTag: c132d6af-7b15-41c1-a27f-72e825affc3a
+		summarizeBy: none
+		sourceColumn: Customer
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column Area
+		dataType: string
+		lineageTag: 7b388f61-3db3-4745-94db-4fafc1df08c9
+		summarizeBy: none
+		sourceColumn: Area
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column 'Monthly Rate'
+		dataType: int64
+		formatString: 0
+		lineageTag: daa91586-48a1-4209-ae6b-55e9741d624a
+		summarizeBy: sum
+		sourceColumn: Monthly Rate
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Payment Date'
+		dataType: dateTime
+		lineageTag: 5a946d6e-1975-4cdf-acaa-fa463b85a58f
+		summarizeBy: none
+		sourceColumn: Payment Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column Status
+		dataType: string
+		lineageTag: 88f92ce0-532e-4be7-9836-f835b742353e
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column Active
+		dataType: int64
+		formatString: 0
+		lineageTag: d4e81050-93f3-48ed-b7b4-d733321c1ddf
+		summarizeBy: sum
+		sourceColumn: Active
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Net Revenue'
+		dataType: double
+		formatString: "₹"\ #,0;-"₹"\ #,0;"₹"\ #,0
+		lineageTag: c7b4f385-6643-47e9-9623-963ae6f0e0c9
+		summarizeBy: sum
+		sourceColumn: Net Revenue
+
+		annotation SummarizationSetBy = Automatic
+
+	column Deduction
+		dataType: double
+		formatString: "₹"\ #,0.00;-"₹"\ #,0.00;"₹"\ #,0.00
+		lineageTag: 08c469bc-7053-4ec4-8649-00322163f483
+		summarizeBy: sum
+		sourceColumn: Deduction
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrentDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: f34d9240-db82-4cfd-b08e-04ddb497b033
+		summarizeBy: none
+		sourceColumn: CurrentDate
+
+		variation Variation
+			isDefault
+			relationship: c5203425-aca8-4c0f-82b3-701c2b5e5367
+			defaultHierarchy: LocalDateTable_ee78f320-654a-4d1b-afed-dbe7a72f2b1f.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Ageing
+		dataType: int64
+		formatString: 0
+		lineageTag: 610f1420-89eb-4477-a221-d08e7b800d3c
+		summarizeBy: none
+		sourceColumn: Ageing
+
+		annotation SummarizationSetBy = User
+
+	column 'Age Bucket'
+		dataType: string
+		lineageTag: d983dd9f-26f7-481f-a8db-a2f432d98b50
+		summarizeBy: none
+		sourceColumn: Age Bucket
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	partition SalesFact-7283c6b1-6a21-4db9-a085-8889898fb1e6 = m
+		mode: import
+		source = ```
+				let
+				    Source = Excel.Workbook(File.Contents("D:\AnalyticsWithNaga\Videos\Projects\Video 2\Customer Ageing.xlsx"), null, true),
+				    #"Ageing Analysis_Sheet" = Source{[Item="Ageing Analysis",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(#"Ageing Analysis_Sheet", [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"TXNumber", type text}, {"Equipment", type text}, {"Customer", type text}, {"Area", type text}, {"Monthly Rate", Int64.Type}, {"Payment Date", type date}, {"Status", type text}, {"Active", Int64.Type}, {"Net Revenue", type number}, {"Deduction", type number}, {"Column11", type any}, {"Column12", type any}, {"Column13", type any}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"Column11", "Column12", "Column13"}),
+				    #"Added Custom" = Table.AddColumn(#"Removed Columns", "Custom", each DateTime.LocalNow()),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Added Custom",{{"Custom", type date}}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Changed Type1",{{"Custom", "CurrentDate"}}),
+				    #"Added Custom1" = Table.AddColumn(#"Renamed Columns", "Custom", each [CurrentDate]-[Payment Date]),
+				    #"Extracted Days" = Table.TransformColumns(#"Added Custom1",{{"Custom", Duration.Days, Int64.Type}}),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Extracted Days",{{"Custom", "Ageing"}}),
+				    #"Added Custom2" = Table.AddColumn(#"Renamed Columns1", "Custom", each if [Ageing] >=0  and   [Ageing] <= 30 then "0 - 30 days" 
+				 else if [Ageing] >=31 and   [Ageing] <= 60 then   "31 - 60 days"  else if [Ageing] >=61 and   [Ageing] <= 90 then   "61 - 90 days" else if [Ageing] >=91 and   [Ageing] <= 180 then   "91 - 180 days" else if [Ageing] >=181 then "> 181 Days - 360 days" else if [Ageing] =-1 then "No Due"else ""),
+				    #"Renamed Columns2" = Table.RenameColumns(#"Added Custom2",{{"Custom", "Age Bucket"}})
+				in
+				    #"Renamed Columns2"
+				```
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,4102 @@
+cultureInfo en-US
+
+	linguisticMetadata =
+			{
+			  "Version": "3.1.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "final_dataset": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Final Dataset"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "final dataset": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "dataset": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "final_dataset.application_ID": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Final Dataset",
+			          "ConceptualProperty": "Application ID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "application ID": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "application": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "application identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "application identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "application identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "application credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "submission": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "presentation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "solicitation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "request": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "claim": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "bid": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "final_dataset.candidate_ID": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Final Dataset",
+			          "ConceptualProperty": "CandidateID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "candidate ID": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "CandidateID": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "candidate": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "candidate identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "candidate identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "candidate identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "candidate credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "applicant": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "contender": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "entrant": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "runner": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "nominee": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "contestant": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.491
+			          }
+			        }
+			      ]
+			    },
+			    "final_dataset.created_date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Final Dataset",
+			          "ConceptualProperty": "CreatedDate"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "created date": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "CreatedDate": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "created moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "created period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "final_dataset.created_date.variation.date_hierarchy": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Final Dataset",
+			          "VariationSource": "CreatedDate",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "created date hierarchy": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date hierarchy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "hierarchy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "final_dataset.created_date.variation.date_hierarchy.year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Final Dataset",
+			          "VariationSource": "CreatedDate",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "created year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "created date year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date year": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "created date yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "created yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "date yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "created moment year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "moment year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "created period year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "period year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.582
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "final_dataset.created_date.variation.date_hierarchy.quarter": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Final Dataset",
+			          "VariationSource": "CreatedDate",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Quarter"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "created quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "created date quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date quarter": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "created date qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.846
+			          }
+			        },
+			        {
+			          "created qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.833
+			          }
+			        },
+			        {
+			          "date qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.833
+			          }
+			        },
+			        {
+			          "qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.818
+			          }
+			        },
+			        {
+			          "created moment quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "moment quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "created period quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "period quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.582
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "final_dataset.created_date.variation.date_hierarchy.month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Final Dataset",
+			          "VariationSource": "CreatedDate",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "created month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "created date month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date month": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "created date mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "created mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "date mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "created moment month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "moment month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "created period month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "period month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.582
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "final_dataset.created_date.variation.date_hierarchy.day": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Final Dataset",
+			          "VariationSource": "CreatedDate",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Day"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "created day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "created date day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date day": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "created moment day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "moment day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "created period day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "period day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.582
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "final_dataset.application_status": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Final Dataset",
+			          "ConceptualProperty": "Application Status"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "application status": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "status": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "application category": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "application importance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "application prestige": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "application prominence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "category": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "importance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "prestige": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "prominence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "application condition": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "application class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "final_dataset.vacancy_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Final Dataset",
+			          "ConceptualProperty": "VACANCY_ID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "vacancy id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "VACANCY_ID": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "vacancy identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "vacancy identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "vacancy identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "vacancy credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "final_dataset.rejected_reason": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Final Dataset",
+			          "ConceptualProperty": "RejectedReason"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "rejected reason": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "RejectedReason": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "reason": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "rejected motivation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "rejected intention": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "motivation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "intention": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "rejected aim": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "rejected motive": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "rejected cause": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "rejected goal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "rejected purpose": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "rejected object": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "canditate": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Canditate"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "canditate": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "canditate.candidate_ID": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Canditate",
+			          "ConceptualProperty": "CandidateID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "candidate ID": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "CandidateID": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "candidate": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "candidate identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "candidate identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "candidate identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "candidate credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "applicant": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "contender": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "entrant": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "runner": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "nominee": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "contestant": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.491
+			          }
+			        }
+			      ]
+			    },
+			    "canditate.gender": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Canditate",
+			          "ConceptualProperty": "Gender"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "gender": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "sexuality": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "sex": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "vacancy": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Vacancy"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "vacancy": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "situation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "opportunity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "job": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "post": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "position": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "opening": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "vacancy.vacancy_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Vacancy",
+			          "ConceptualProperty": "VACANCY_ID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "vacancy id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "id": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "VACANCY_ID": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "vacancy identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "vacancy identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "vacancy identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "vacancy credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        }
+			      ],
+			      "NameType": "Identifier"
+			    },
+			    "vacancy.vacancy_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Vacancy",
+			          "ConceptualProperty": "Vacancy_Name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "vacancy name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "name": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "Vacancy_Name": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "vacancy nickname": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "vacancy title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "vacancy label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "vacancy tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        }
+			      ],
+			      "NameType": "Name"
+			    },
+			    "vacancy.vacancy_start_date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Vacancy",
+			          "ConceptualProperty": "VACANCY_START_DATE"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "vacancy start date": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "VACANCY_START_DATE": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "start date": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "vacancy start moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "start moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "vacancy start period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "start period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "vacancy commencement date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.615
+			          }
+			        },
+			        {
+			          "vacancy inception date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.615
+			          }
+			        },
+			        {
+			          "vacancy kickoff date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.615
+			          }
+			        },
+			        {
+			          "commencement date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "inception date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "kickoff date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.6
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "vacancy.vacancy_start_date.variation.date_hierarchy": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Vacancy",
+			          "VariationSource": "VACANCY_START_DATE",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "vacancy start date hierarchy": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date hierarchy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "start date hierarchy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "vacancy.vacancy_start_date.variation.date_hierarchy.year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Vacancy",
+			          "VariationSource": "VACANCY_START_DATE",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "vacancy start year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "vacancy start date year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "start year": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "date year": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "start date year": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "vacancy start date yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "vacancy start yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "start date yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "start yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "date yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "vacancy commencement date year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.629
+			          }
+			        },
+			        {
+			          "vacancy inception date year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.629
+			          }
+			        },
+			        {
+			          "vacancy kickoff date year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.629
+			          }
+			        },
+			        {
+			          "vacancy start moment year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.617
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "vacancy.vacancy_start_date.variation.date_hierarchy.quarter": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Vacancy",
+			          "VariationSource": "VACANCY_START_DATE",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Quarter"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "vacancy start quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "vacancy start date quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "start quarter": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "date quarter": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "start date quarter": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "vacancy start date qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.857
+			          }
+			        },
+			        {
+			          "vacancy start qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.846
+			          }
+			        },
+			        {
+			          "start date qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.846
+			          }
+			        },
+			        {
+			          "start qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.833
+			          }
+			        },
+			        {
+			          "date qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.833
+			          }
+			        },
+			        {
+			          "qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.818
+			          }
+			        },
+			        {
+			          "vacancy commencement date quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.629
+			          }
+			        },
+			        {
+			          "vacancy inception date quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.629
+			          }
+			        },
+			        {
+			          "vacancy kickoff date quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.629
+			          }
+			        },
+			        {
+			          "vacancy start moment quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.617
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "vacancy.vacancy_start_date.variation.date_hierarchy.month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Vacancy",
+			          "VariationSource": "VACANCY_START_DATE",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "vacancy start month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "vacancy start date month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "start month": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "date month": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "start date month": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "vacancy start date mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "vacancy start mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "start date mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "start mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "date mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "vacancy commencement date month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.629
+			          }
+			        },
+			        {
+			          "vacancy inception date month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.629
+			          }
+			        },
+			        {
+			          "vacancy kickoff date month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.629
+			          }
+			        },
+			        {
+			          "vacancy start moment month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.617
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "vacancy.vacancy_start_date.variation.date_hierarchy.day": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Vacancy",
+			          "VariationSource": "VACANCY_START_DATE",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Day"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "vacancy start day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "vacancy start date day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "start day": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "date day": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "start date day": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "vacancy commencement date day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.629
+			          }
+			        },
+			        {
+			          "vacancy inception date day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.629
+			          }
+			        },
+			        {
+			          "vacancy kickoff date day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.629
+			          }
+			        },
+			        {
+			          "vacancy start moment day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "commencement date day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.615
+			          }
+			        },
+			        {
+			          "inception date day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.615
+			          }
+			        },
+			        {
+			          "kickoff date day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.615
+			          }
+			        },
+			        {
+			          "vacancy beginning date day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.61
+			          }
+			        },
+			        {
+			          "vacancy first date day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.61
+			          }
+			        },
+			        {
+			          "vacancy initiation date day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.61
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "vacancy.vacancy_end_date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Vacancy",
+			          "ConceptualProperty": "VACANCY_END_DATE"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "vacancy end date": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "VACANCY_END_DATE": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "end date": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "vacancy end moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "end moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "vacancy end period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "end period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "vacancy culmination date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.615
+			          }
+			        },
+			        {
+			          "vacancy completion date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "vacancy conclusion date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "vacancy expiration date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "culmination date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "completion date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.6
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "vacancy.vacancy_end_date.variation.date_hierarchy": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Vacancy",
+			          "VariationSource": "VACANCY_END_DATE",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "vacancy end date hierarchy": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date hierarchy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "end date hierarchy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "vacancy.vacancy_end_date.variation.date_hierarchy.year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Vacancy",
+			          "VariationSource": "VACANCY_END_DATE",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "vacancy end year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "vacancy end date year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "end year": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "date year": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "end date year": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "vacancy end date yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "vacancy end yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "end date yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "end yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "date yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "vacancy culmination date year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.629
+			          }
+			        },
+			        {
+			          "vacancy completion date year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "vacancy conclusion date year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "vacancy expiration date year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.617
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "vacancy.vacancy_end_date.variation.date_hierarchy.quarter": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Vacancy",
+			          "VariationSource": "VACANCY_END_DATE",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Quarter"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "vacancy end quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "vacancy end date quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "end quarter": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "date quarter": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "end date quarter": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "vacancy end date qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.857
+			          }
+			        },
+			        {
+			          "vacancy end qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.846
+			          }
+			        },
+			        {
+			          "end date qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.846
+			          }
+			        },
+			        {
+			          "end qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.833
+			          }
+			        },
+			        {
+			          "date qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.833
+			          }
+			        },
+			        {
+			          "qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.818
+			          }
+			        },
+			        {
+			          "vacancy culmination date quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.629
+			          }
+			        },
+			        {
+			          "vacancy completion date quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "vacancy conclusion date quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "vacancy expiration date quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.617
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "vacancy.vacancy_end_date.variation.date_hierarchy.month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Vacancy",
+			          "VariationSource": "VACANCY_END_DATE",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "vacancy end month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "vacancy end date month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "end month": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "date month": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "end date month": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "vacancy end date mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "vacancy end mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "end date mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "end mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "date mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "vacancy culmination date month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.629
+			          }
+			        },
+			        {
+			          "vacancy completion date month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "vacancy conclusion date month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "vacancy expiration date month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.617
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "vacancy.vacancy_end_date.variation.date_hierarchy.day": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Vacancy",
+			          "VariationSource": "VACANCY_END_DATE",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Day"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "vacancy end day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "vacancy end date day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "end day": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "date day": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "end date day": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "vacancy culmination date day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.629
+			          }
+			        },
+			        {
+			          "vacancy completion date day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "vacancy conclusion date day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "vacancy expiration date day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "vacancy end moment day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "culmination date day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.615
+			          }
+			        },
+			        {
+			          "vacancy cease date day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.61
+			          }
+			        },
+			        {
+			          "vacancy end time day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.61
+			          }
+			        },
+			        {
+			          "vacancy completion day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "vacancy conclusion day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.609
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "vacancy.lastdateforapplication": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Vacancy",
+			          "ConceptualProperty": "LASTDATEFORAPPLICATION"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "lastdateforapplication": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "vacancy.lastdateforapplication.variation.date_hierarchy": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Vacancy",
+			          "VariationSource": "LASTDATEFORAPPLICATION",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "lastdateforapplication date hierarchy": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date hierarchy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "vacancy.lastdateforapplication.variation.date_hierarchy.year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Vacancy",
+			          "VariationSource": "LASTDATEFORAPPLICATION",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "lastdateforapplication year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "lastdateforapplication yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.736
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "vacancy.lastdateforapplication.variation.date_hierarchy.quarter": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Vacancy",
+			          "VariationSource": "LASTDATEFORAPPLICATION",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Quarter"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "lastdateforapplication quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "lastdateforapplication qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.833
+			          }
+			        },
+			        {
+			          "qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.818
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "vacancy.lastdateforapplication.variation.date_hierarchy.month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Vacancy",
+			          "VariationSource": "LASTDATEFORAPPLICATION",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "lastdateforapplication month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "lastdateforapplication mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.736
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "vacancy.lastdateforapplication.variation.date_hierarchy.day": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Vacancy",
+			          "VariationSource": "LASTDATEFORAPPLICATION",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Day"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "lastdateforapplication day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "day": {
+			            "State": "Generated"
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "rejected_reason": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Rejected Reason"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "rejected reason": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "reason": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "rejected motivation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "rejected intention": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "motivation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "intention": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "rejected aim": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "rejected motive": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "rejected cause": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "rejected goal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "rejected purpose": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "rejected object": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "rejected_reason.rejected_reason": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Rejected Reason",
+			          "ConceptualProperty": "RejectedReason"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "rejected reason": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "rejected reason name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "RejectedReason": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "reason": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "rejected motivation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "rejected intention": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "motivation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "intention": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "rejected aim": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "rejected motive": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "rejected cause": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "rejected goal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "rejected purpose": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "rejected object": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Weight": 0.485
+			          }
+			        }
+			      ],
+			      "NameType": "Name"
+			    }
+			  },
+			  "Relationships": {
+			    "vacancy_is_named_vacancy_id": {
+			      "Binding": {
+			        "ConceptualEntity": "Vacancy"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vacancy": {
+			          "Target": {
+			            "Entity": "vacancy"
+			          }
+			        },
+			        "vacancy.vacancy_id": {
+			          "Target": {
+			            "Entity": "vacancy.vacancy_id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "vacancy"
+			            },
+			            "Name": {
+			              "Role": "vacancy.vacancy_id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vacancy"
+			            },
+			            "Object": {
+			              "Role": "vacancy.vacancy_id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "vacancy_is_named_vacancy_name": {
+			      "Binding": {
+			        "ConceptualEntity": "Vacancy"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vacancy": {
+			          "Target": {
+			            "Entity": "vacancy"
+			          }
+			        },
+			        "vacancy.vacancy_name": {
+			          "Target": {
+			            "Entity": "vacancy.vacancy_name"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "vacancy"
+			            },
+			            "Name": {
+			              "Role": "vacancy.vacancy_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vacancy"
+			            },
+			            "Object": {
+			              "Role": "vacancy.vacancy_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "rejected_reason_is_named_rejected_reason": {
+			      "Binding": {
+			        "ConceptualEntity": "Rejected Reason"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "rejected_reason": {
+			          "Target": {
+			            "Entity": "rejected_reason"
+			          }
+			        },
+			        "rejected_reason.rejected_reason": {
+			          "Target": {
+			            "Entity": "rejected_reason.rejected_reason"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "rejected_reason"
+			            },
+			            "Name": {
+			              "Role": "rejected_reason.rejected_reason"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "rejected_reason"
+			            },
+			            "Object": {
+			              "Role": "rejected_reason.rejected_reason"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "final_dataset_is_created_on_created_date": {
+			      "Binding": {
+			        "ConceptualEntity": "Final Dataset"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "final_dataset": {
+			          "Target": {
+			            "Entity": "final_dataset"
+			          }
+			        },
+			        "final_dataset.created_date": {
+			          "Target": {
+			            "Entity": "final_dataset.created_date"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "When": {
+			          "Role": "final_dataset.created_date"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Verb": {
+			            "Verbs": [
+			              {
+			                "create": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "final_dataset"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.9
+			        }
+			      ]
+			    },
+			    "vacancy_is_started_on_vacancy_start_date": {
+			      "Binding": {
+			        "ConceptualEntity": "Vacancy"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vacancy": {
+			          "Target": {
+			            "Entity": "vacancy"
+			          }
+			        },
+			        "vacancy.vacancy_start_date": {
+			          "Target": {
+			            "Entity": "vacancy.vacancy_start_date"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "When": {
+			          "Role": "vacancy.vacancy_start_date"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Verb": {
+			            "Verbs": [
+			              {
+			                "start": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "vacancy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.9
+			        }
+			      ]
+			    },
+			    "vacancy_is_ended_on_vacancy_end_date": {
+			      "Binding": {
+			        "ConceptualEntity": "Vacancy"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vacancy": {
+			          "Target": {
+			            "Entity": "vacancy"
+			          }
+			        },
+			        "vacancy.vacancy_end_date": {
+			          "Target": {
+			            "Entity": "vacancy.vacancy_end_date"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "When": {
+			          "Role": "vacancy.vacancy_end_date"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Verb": {
+			            "Verbs": [
+			              {
+			                "end": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "vacancy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.9
+			        }
+			      ]
+			    },
+			    "final_dataset_has_application_ID": {
+			      "Binding": {
+			        "ConceptualEntity": "Final Dataset"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "final_dataset": {
+			          "Target": {
+			            "Entity": "final_dataset"
+			          }
+			        },
+			        "final_dataset.application_ID": {
+			          "Target": {
+			            "Entity": "final_dataset.application_ID"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "final_dataset"
+			            },
+			            "Object": {
+			              "Role": "final_dataset.application_ID"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "final_dataset_has_created_date": {
+			      "Binding": {
+			        "ConceptualEntity": "Final Dataset"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "final_dataset": {
+			          "Target": {
+			            "Entity": "final_dataset"
+			          }
+			        },
+			        "final_dataset.created_date": {
+			          "Target": {
+			            "Entity": "final_dataset.created_date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "final_dataset"
+			            },
+			            "Object": {
+			              "Role": "final_dataset.created_date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "final_dataset_has_application_status": {
+			      "Binding": {
+			        "ConceptualEntity": "Final Dataset"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "final_dataset": {
+			          "Target": {
+			            "Entity": "final_dataset"
+			          }
+			        },
+			        "final_dataset.application_status": {
+			          "Target": {
+			            "Entity": "final_dataset.application_status"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "final_dataset"
+			            },
+			            "Object": {
+			              "Role": "final_dataset.application_status"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "canditate_has_candidate_ID": {
+			      "Binding": {
+			        "ConceptualEntity": "Canditate"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "canditate": {
+			          "Target": {
+			            "Entity": "canditate"
+			          }
+			        },
+			        "canditate.candidate_ID": {
+			          "Target": {
+			            "Entity": "canditate.candidate_ID"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "canditate"
+			            },
+			            "Object": {
+			              "Role": "canditate.candidate_ID"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "canditate_has_gender": {
+			      "Binding": {
+			        "ConceptualEntity": "Canditate"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "canditate": {
+			          "Target": {
+			            "Entity": "canditate"
+			          }
+			        },
+			        "canditate.gender": {
+			          "Target": {
+			            "Entity": "canditate.gender"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "canditate"
+			            },
+			            "Object": {
+			              "Role": "canditate.gender"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "vacancy_has_vacancy_start_date": {
+			      "Binding": {
+			        "ConceptualEntity": "Vacancy"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vacancy": {
+			          "Target": {
+			            "Entity": "vacancy"
+			          }
+			        },
+			        "vacancy.vacancy_start_date": {
+			          "Target": {
+			            "Entity": "vacancy.vacancy_start_date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vacancy"
+			            },
+			            "Object": {
+			              "Role": "vacancy.vacancy_start_date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "vacancy_has_vacancy_end_date": {
+			      "Binding": {
+			        "ConceptualEntity": "Vacancy"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vacancy": {
+			          "Target": {
+			            "Entity": "vacancy"
+			          }
+			        },
+			        "vacancy.vacancy_end_date": {
+			          "Target": {
+			            "Entity": "vacancy.vacancy_end_date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vacancy"
+			            },
+			            "Object": {
+			              "Role": "vacancy.vacancy_end_date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "vacancy_has_lastdateforapplication": {
+			      "Binding": {
+			        "ConceptualEntity": "Vacancy"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vacancy": {
+			          "Target": {
+			            "Entity": "vacancy"
+			          }
+			        },
+			        "vacancy.lastdateforapplication": {
+			          "Target": {
+			            "Entity": "vacancy.lastdateforapplication"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vacancy"
+			            },
+			            "Object": {
+			              "Role": "vacancy.lastdateforapplication"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "final_dataset_has_rejected_reason": {
+			      "Binding": {
+			        "ConceptualEntity": "Final Dataset"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "final_dataset": {
+			          "Target": {
+			            "Entity": "final_dataset"
+			          }
+			        },
+			        "rejected_reason": {
+			          "Target": {
+			            "Entity": "rejected_reason"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "final_dataset"
+			            },
+			            "Object": {
+			              "Role": "rejected_reason"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "rejected_reason"
+			            },
+			            "Object": {
+			              "Role": "final_dataset"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "final_dataset_has_canditate": {
+			      "Binding": {
+			        "ConceptualEntity": "Final Dataset"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "final_dataset": {
+			          "Target": {
+			            "Entity": "final_dataset"
+			          }
+			        },
+			        "canditate": {
+			          "Target": {
+			            "Entity": "canditate"
+			          },
+			          "Nouns": [
+			            {
+			              "candidate": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "final_dataset"
+			            },
+			            "Object": {
+			              "Role": "canditate"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "canditate"
+			            },
+			            "Object": {
+			              "Role": "final_dataset"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "final_dataset_has_vacancy": {
+			      "Binding": {
+			        "ConceptualEntity": "Final Dataset"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "final_dataset": {
+			          "Target": {
+			            "Entity": "final_dataset"
+			          }
+			        },
+			        "vacancy": {
+			          "Target": {
+			            "Entity": "vacancy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "final_dataset"
+			            },
+			            "Object": {
+			              "Role": "vacancy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vacancy"
+			            },
+			            "Object": {
+			              "Role": "final_dataset"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "final_dataset_created_date_has_variation_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "Final Dataset"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "final_dataset.created_date": {
+			          "Target": {
+			            "Entity": "final_dataset.created_date"
+			          }
+			        },
+			        "final_dataset.created_date.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "final_dataset.created_date.variation.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "final_dataset.created_date"
+			            },
+			            "Object": {
+			              "Role": "final_dataset.created_date.variation.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "final_dataset_created_date_variation_date_hierarchy_has_year": {
+			      "Binding": {
+			        "ConceptualEntity": "Final Dataset"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "final_dataset.created_date.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "final_dataset.created_date.variation.date_hierarchy"
+			          }
+			        },
+			        "final_dataset.created_date.variation.date_hierarchy.year": {
+			          "Target": {
+			            "Entity": "final_dataset.created_date.variation.date_hierarchy.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "final_dataset.created_date.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "final_dataset.created_date.variation.date_hierarchy.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "final_dataset_created_date_variation_date_hierarchy_has_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "Final Dataset"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "final_dataset.created_date.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "final_dataset.created_date.variation.date_hierarchy"
+			          }
+			        },
+			        "final_dataset.created_date.variation.date_hierarchy.quarter": {
+			          "Target": {
+			            "Entity": "final_dataset.created_date.variation.date_hierarchy.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "final_dataset.created_date.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "final_dataset.created_date.variation.date_hierarchy.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "final_dataset_created_date_variation_date_hierarchy_has_month": {
+			      "Binding": {
+			        "ConceptualEntity": "Final Dataset"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "final_dataset.created_date.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "final_dataset.created_date.variation.date_hierarchy"
+			          }
+			        },
+			        "final_dataset.created_date.variation.date_hierarchy.month": {
+			          "Target": {
+			            "Entity": "final_dataset.created_date.variation.date_hierarchy.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "final_dataset.created_date.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "final_dataset.created_date.variation.date_hierarchy.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "final_dataset_created_date_variation_date_hierarchy_has_day": {
+			      "Binding": {
+			        "ConceptualEntity": "Final Dataset"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "final_dataset.created_date.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "final_dataset.created_date.variation.date_hierarchy"
+			          }
+			        },
+			        "final_dataset.created_date.variation.date_hierarchy.day": {
+			          "Target": {
+			            "Entity": "final_dataset.created_date.variation.date_hierarchy.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "final_dataset.created_date.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "final_dataset.created_date.variation.date_hierarchy.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "vacancy_vacancy_start_date_has_variation_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "Vacancy"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vacancy.vacancy_start_date": {
+			          "Target": {
+			            "Entity": "vacancy.vacancy_start_date"
+			          }
+			        },
+			        "vacancy.vacancy_start_date.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "vacancy.vacancy_start_date.variation.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vacancy.vacancy_start_date"
+			            },
+			            "Object": {
+			              "Role": "vacancy.vacancy_start_date.variation.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "vacancy_vacancy_start_date_variation_date_hierarchy_has_year": {
+			      "Binding": {
+			        "ConceptualEntity": "Vacancy"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vacancy.vacancy_start_date.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "vacancy.vacancy_start_date.variation.date_hierarchy"
+			          }
+			        },
+			        "vacancy.vacancy_start_date.variation.date_hierarchy.year": {
+			          "Target": {
+			            "Entity": "vacancy.vacancy_start_date.variation.date_hierarchy.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vacancy.vacancy_start_date.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "vacancy.vacancy_start_date.variation.date_hierarchy.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "vacancy_vacancy_start_date_variation_date_hierarchy_has_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "Vacancy"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vacancy.vacancy_start_date.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "vacancy.vacancy_start_date.variation.date_hierarchy"
+			          }
+			        },
+			        "vacancy.vacancy_start_date.variation.date_hierarchy.quarter": {
+			          "Target": {
+			            "Entity": "vacancy.vacancy_start_date.variation.date_hierarchy.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vacancy.vacancy_start_date.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "vacancy.vacancy_start_date.variation.date_hierarchy.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "vacancy_vacancy_start_date_variation_date_hierarchy_has_month": {
+			      "Binding": {
+			        "ConceptualEntity": "Vacancy"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vacancy.vacancy_start_date.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "vacancy.vacancy_start_date.variation.date_hierarchy"
+			          }
+			        },
+			        "vacancy.vacancy_start_date.variation.date_hierarchy.month": {
+			          "Target": {
+			            "Entity": "vacancy.vacancy_start_date.variation.date_hierarchy.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vacancy.vacancy_start_date.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "vacancy.vacancy_start_date.variation.date_hierarchy.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "vacancy_vacancy_start_date_variation_date_hierarchy_has_day": {
+			      "Binding": {
+			        "ConceptualEntity": "Vacancy"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vacancy.vacancy_start_date.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "vacancy.vacancy_start_date.variation.date_hierarchy"
+			          }
+			        },
+			        "vacancy.vacancy_start_date.variation.date_hierarchy.day": {
+			          "Target": {
+			            "Entity": "vacancy.vacancy_start_date.variation.date_hierarchy.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vacancy.vacancy_start_date.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "vacancy.vacancy_start_date.variation.date_hierarchy.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "vacancy_vacancy_end_date_has_variation_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "Vacancy"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vacancy.vacancy_end_date": {
+			          "Target": {
+			            "Entity": "vacancy.vacancy_end_date"
+			          }
+			        },
+			        "vacancy.vacancy_end_date.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "vacancy.vacancy_end_date.variation.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vacancy.vacancy_end_date"
+			            },
+			            "Object": {
+			              "Role": "vacancy.vacancy_end_date.variation.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "vacancy_vacancy_end_date_variation_date_hierarchy_has_year": {
+			      "Binding": {
+			        "ConceptualEntity": "Vacancy"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vacancy.vacancy_end_date.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "vacancy.vacancy_end_date.variation.date_hierarchy"
+			          }
+			        },
+			        "vacancy.vacancy_end_date.variation.date_hierarchy.year": {
+			          "Target": {
+			            "Entity": "vacancy.vacancy_end_date.variation.date_hierarchy.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vacancy.vacancy_end_date.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "vacancy.vacancy_end_date.variation.date_hierarchy.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "vacancy_vacancy_end_date_variation_date_hierarchy_has_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "Vacancy"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vacancy.vacancy_end_date.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "vacancy.vacancy_end_date.variation.date_hierarchy"
+			          }
+			        },
+			        "vacancy.vacancy_end_date.variation.date_hierarchy.quarter": {
+			          "Target": {
+			            "Entity": "vacancy.vacancy_end_date.variation.date_hierarchy.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vacancy.vacancy_end_date.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "vacancy.vacancy_end_date.variation.date_hierarchy.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "vacancy_vacancy_end_date_variation_date_hierarchy_has_month": {
+			      "Binding": {
+			        "ConceptualEntity": "Vacancy"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vacancy.vacancy_end_date.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "vacancy.vacancy_end_date.variation.date_hierarchy"
+			          }
+			        },
+			        "vacancy.vacancy_end_date.variation.date_hierarchy.month": {
+			          "Target": {
+			            "Entity": "vacancy.vacancy_end_date.variation.date_hierarchy.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vacancy.vacancy_end_date.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "vacancy.vacancy_end_date.variation.date_hierarchy.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "vacancy_vacancy_end_date_variation_date_hierarchy_has_day": {
+			      "Binding": {
+			        "ConceptualEntity": "Vacancy"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vacancy.vacancy_end_date.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "vacancy.vacancy_end_date.variation.date_hierarchy"
+			          }
+			        },
+			        "vacancy.vacancy_end_date.variation.date_hierarchy.day": {
+			          "Target": {
+			            "Entity": "vacancy.vacancy_end_date.variation.date_hierarchy.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vacancy.vacancy_end_date.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "vacancy.vacancy_end_date.variation.date_hierarchy.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "vacancy_lastdateforapplication_has_variation_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "Vacancy"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vacancy.lastdateforapplication": {
+			          "Target": {
+			            "Entity": "vacancy.lastdateforapplication"
+			          }
+			        },
+			        "vacancy.lastdateforapplication.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "vacancy.lastdateforapplication.variation.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vacancy.lastdateforapplication"
+			            },
+			            "Object": {
+			              "Role": "vacancy.lastdateforapplication.variation.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "vacancy_lastdateforapplication_variation_date_hierarchy_has_year": {
+			      "Binding": {
+			        "ConceptualEntity": "Vacancy"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vacancy.lastdateforapplication.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "vacancy.lastdateforapplication.variation.date_hierarchy"
+			          }
+			        },
+			        "vacancy.lastdateforapplication.variation.date_hierarchy.year": {
+			          "Target": {
+			            "Entity": "vacancy.lastdateforapplication.variation.date_hierarchy.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vacancy.lastdateforapplication.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "vacancy.lastdateforapplication.variation.date_hierarchy.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "vacancy_lastdateforapplication_variation_date_hierarchy_has_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "Vacancy"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vacancy.lastdateforapplication.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "vacancy.lastdateforapplication.variation.date_hierarchy"
+			          }
+			        },
+			        "vacancy.lastdateforapplication.variation.date_hierarchy.quarter": {
+			          "Target": {
+			            "Entity": "vacancy.lastdateforapplication.variation.date_hierarchy.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vacancy.lastdateforapplication.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "vacancy.lastdateforapplication.variation.date_hierarchy.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "vacancy_lastdateforapplication_variation_date_hierarchy_has_month": {
+			      "Binding": {
+			        "ConceptualEntity": "Vacancy"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vacancy.lastdateforapplication.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "vacancy.lastdateforapplication.variation.date_hierarchy"
+			          }
+			        },
+			        "vacancy.lastdateforapplication.variation.date_hierarchy.month": {
+			          "Target": {
+			            "Entity": "vacancy.lastdateforapplication.variation.date_hierarchy.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vacancy.lastdateforapplication.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "vacancy.lastdateforapplication.variation.date_hierarchy.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    },
+			    "vacancy_lastdateforapplication_variation_date_hierarchy_has_day": {
+			      "Binding": {
+			        "ConceptualEntity": "Vacancy"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vacancy.lastdateforapplication.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "vacancy.lastdateforapplication.variation.date_hierarchy"
+			          }
+			        },
+			        "vacancy.lastdateforapplication.variation.date_hierarchy.day": {
+			          "Target": {
+			            "Entity": "vacancy.lastdateforapplication.variation.date_hierarchy.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vacancy.lastdateforapplication.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "vacancy.lastdateforapplication.variation.date_hierarchy.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99
+			        }
+			      ]
+			    }
+			  }
+			}
+		contentType: json
+

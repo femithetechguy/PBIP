@@ -1,0 +1,28 @@
+relationship f44807c2-a61a-4981-919d-2f87c05e6929
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Dimension.modification_timestamp
+	toColumn: LocalDateTable_b680acb2-c777-43fa-b303-53711fddbb5f.Date
+
+relationship a0b3dac4-19aa-4117-8f4f-d357652d1b1d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: FactLoan.start_date
+	toColumn: LocalDateTable_b7a3cc9a-3f54-4b28-be69-093a9d0c8cc7.Date
+
+relationship 85766709-2eaa-4c73-b0ed-6e52b192c527
+	joinOnDateBehavior: datePartOnly
+	fromColumn: FactLoan.fx_date
+	toColumn: LocalDateTable_483766a5-e481-401e-a681-8ac10e4f673d.Date
+
+relationship 49d6d520-f632-472e-8688-b062dd41715b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: DimDate.FullDateAlternateKey
+	toColumn: LocalDateTable_64ed4c30-4f19-4765-ad75-7eec422467e7.Date
+
+relationship 3f96c72f-c8e1-4370-88f2-a860d5d03a40
+	fromColumn: FactLoan.DisbursementDateId
+	toColumn: DimDate.DateKey
+
+relationship 59c44e60-9d21-4312-a2c1-aef08868d759
+	fromColumn: FactLoan.loan_key
+	toColumn: Dimension.loan_key
+

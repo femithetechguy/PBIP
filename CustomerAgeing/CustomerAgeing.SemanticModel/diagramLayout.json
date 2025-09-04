@@ -1,0 +1,82 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 105,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 1521.1,
+            "y": 0
+          },
+          "nodeIndex": "Customer",
+          "size": {
+            "height": 156,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2212.63,
+            "y": 0.147109
+          },
+          "nodeIndex": "DimDate",
+          "size": {
+            "height": 187,
+            "width": 242
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2259.18,
+            "y": 372.899
+          },
+          "nodeIndex": "Equipment",
+          "size": {
+            "height": 149,
+            "width": 242
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1415.75,
+            "y": 388.072
+          },
+          "nodeIndex": "Geography",
+          "size": {
+            "height": 186,
+            "width": 242
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1825.3,
+            "y": 129.3
+          },
+          "nodeIndex": "SalesFact",
+          "size": {
+            "height": 337,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

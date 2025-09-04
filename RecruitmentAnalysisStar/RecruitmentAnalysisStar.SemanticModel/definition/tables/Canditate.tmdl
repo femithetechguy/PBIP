@@ -1,0 +1,43 @@
+table Canditate
+	lineageTag: b1ba9096-b9b3-433c-a519-c21f7649c228
+
+	column CandidateID
+		dataType: int64
+		formatString: 0
+		lineageTag: 9043eb40-0804-4558-a1bf-40b4c4667d4b
+		summarizeBy: none
+		sourceColumn: CandidateID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Gender
+		dataType: string
+		lineageTag: fd18b3dc-6e31-4136-8522-dc83a71fcb7e
+		summarizeBy: none
+		sourceColumn: Gender
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	partition Canditate-6e2d165b-d255-43f6-8058-dc22d28c1d12 = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("D:\AnalyticsWithNaga\Source\Projects\V6 Application Tracking.xlsx"), null, true),
+				    #"Final Dataset_Sheet" = Source{[Item="Final Dataset",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(#"Final Dataset_Sheet", [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Application ID", Int64.Type}, {"Qualification", type text}, {"CandidateID", Int64.Type}, {"Name", type any}, {"Gender", type text}, {"CreatedDate", type date}, {"Application Status", type text}, {"VACANCY_ID", Int64.Type}, {"Vacancy_Name", type text}, {"VACANCY_START_DATE", type date}, {"VACANCY_END_DATE", type date}, {"LASTDATEFORAPPLICATION", type date}, {"RejectedReason", type any}}),
+				    #"Removed Other Columns" = Table.SelectColumns(#"Changed Type",{"Qualification", "CandidateID", "Name", "Gender"}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Removed Other Columns",{"Name"}),
+				    #"Removed Duplicates" = Table.Distinct(#"Removed Columns"),
+				    #"Sorted Rows" = Table.Sort(#"Removed Duplicates",{{"CandidateID", Order.Ascending}}),
+				    #"Removed Columns1" = Table.RemoveColumns(#"Sorted Rows",{"Qualification"}),
+				    #"Removed Duplicates1" = Table.Distinct(#"Removed Columns1")
+				in
+				    #"Removed Duplicates1"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
